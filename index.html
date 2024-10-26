@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Logistics Adminstrative portal" />
+    <meta name="author" content="Emmanuel Ola. Olusola" />
+    <meta name="keyword" content="logistics, freight, management, cloud, portal, finance, financial institution, web app" />
+
+    <title>Help - Logistics</title>
+
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="~/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.min.css" media="all" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-select.min.css" media="all" />
+
+    <link rel="stylesheet" href="~/css/site.css" media="all" />
+    <link rel="stylesheet" href="~/css/jquery.datetimepicker.min.css" />
+    <!--<link rel="stylesheet" href="~/font/css/all.min.css" />-->
+    <link rel="stylesheet" href="~/css/datatables.min.css" media="all" />
+    <link rel="stylesheet" href="~/css/buttons.dataTables.min.css" />
+
+    <link href="~/css/climacons-font.css" rel="stylesheet" media="all">
+    <link href="~/css/font-awesome.css" rel="stylesheet" media="all" />
+    <link href="~/css/simple-line-icons.css" rel="stylesheet" media="all" />
+    <link href="~/css/navs.css" rel="stylesheet" />
+    
+    <style>
+        .nowrap{
+            white-space:nowrap !important;
+        }
+        .dt-buttons{
+            margin-right:3em;
+        }
+        .dt-buttons button {
+            border: 1px solid #d0d0d0 !important;
+            border-radius: 3px;
+            margin-right:0.2em !important;
+        }
+
+        .bootstrap-select.form-control {
+            border: 1px solid #ced4da;
+        }
+        .small table{
+            font-size:12px !important;
+        }
+        /*.ctrl{
+            position:relative;
+        }*/
+        .ctrl > * {margin-right:3px;}
+        .ctrl input[type=checkbox]{
+            vertical-align: middle;
+        }
+        tr.align-middle td{
+            vertical-align:middle !important;
+        }
+
+        .text-company {
+            color:#E25930 !important;
+        }
+        .border-company{
+            border-color: #E2593050 !important;
+        }
+        .btn-company{
+            background-color: #E25930 !important;
+        }
+        .btn-company:hover{
+            background-color: #E2593050 !important;
+        }
+        .btn-outline-company{
+            color: #E25930 !important;
+            border-color: #E25930 !important;
+        }
+        .btn-outline-company:hover{
+            color:#fff !important;
+            background-color: #E25930 !important;
+            border-color: #E25930 !important;
+        }
+        .btn-outline-company:focus{
+            box-shadow:0 0 0 0.2rem #E2593025
+        }
+        #dvDimension{
+            max-height:150px ;
+            overflow-y:auto;
+            overflow-x:hidden;
+        }
+        #dvDimension input{
+            text-align:right !important;
+        }
+        #dvDimension .cx{
+            text-decoration:none !important;
+        }
+        .mt_5{
+            margin-top:5px;
+        }
+        .edt{
+            font-weight:bold;
+            font-size:larger;
+        }
+        .no-auto-fill{}
+        .btnPrs{}
+    </style>
+
+    @await RenderSectionAsync("Style", required: false)
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="page-wrapper chiller-theme toggled">
+        
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="~/"><img src="~/media/_Logo_w.png" height="50" /></a>
+                    <div id="close-sidebar"><i class="fas fa-bars"></i></div>
+                </div>
+                <div class="sidebar-header">
+                    <!--<div class="user-pic">
+                        <img class="img-responsive img-rounded" src="media/avatar.png" />
+                    </div>-->
+                    <div class="user-info">
+                        <span class="user-name"><i class="fas fa-user-circle"></i><strong>&nbsp;&nbsp;@Utility.Name</strong></span>
+                        <span class="user-role"><i class="fas fa-tasks"></i> &nbsp;&nbsp;@Utility.Role</span>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="">
+                        <li class="header-menu">
+                            <span>General</span>
+                        </li>
+                        <li class="">
+                            <a href="~/"><i class="icon-home"></i><span>Dashboard</span></a>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#" class=""><i class="icon-control-forward mr-2"></i> <span> Warehouse</span></a>
+                            <div class="sidebar-submenu">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="~/warehouse/delivery">
+                                            <i class="icon-basket-loaded"></i><span> Courier Delivery</span>
+                                        </a>
+                                        <button onclick="location.replace('/warehouse/delivery/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li>
+                                        <a href="~/warehouse/receipt">
+                                            <i class="icon-target"></i>
+                                            <span> Warehouse Receipt</span>
+                                        </a>
+                                        <button onclick="location.replace('/warehouse/receipt/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#" class=""><i class="icon-credit-card mr-2"></i> <span> Account</span></a>
+                            <div class="sidebar-submenu">
+                                <ul class="list-unstyled">
+                                    <li class="d-none @ListValues.MenuId.account_invoice.ToString() @ListValues.MenuId.account_invoice_air.ToString() @ListValues.MenuId.account_invoice_ocean.ToString() @ListValues.MenuId.account_invoice_others.ToString() @ListValues.MenuId.account_invoice_generate.ToString() @ListValues.MenuId.account_invoice_delete.ToString() @ListValues.MenuId.account_invoice_update.ToString()">
+                                        <a href="~/account/invoice"><i class="icon-book-open"></i><span> Invoice</span></a>
+                                        <button onclick="location.replace('/account/invoice/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.account_payment.ToString() @ListValues.MenuId.account_payment_add.ToString() @ListValues.MenuId.account_payment_edit.ToString() @ListValues.MenuId.account_payment_delete.ToString()">
+                                        <a href="~/account/payments"><i class="icon-wallet"></i><span> Payment</span></a>
+                                        <button onclick="location.replace('/account/payments/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#" class=""><i class="icon-rocket mr-2"></i> <span> Shipments</span></a>
+                            <div class="sidebar-submenu">
+                                <ul class="list-unstyled">
+                                    <li class="">
+                                        <a href="~/shipment/airwaybill"><i class="icon-doc"></i><span> Air WayBill</span></a>
+                                        <button onclick="location.replace('/shipment/airwaybill/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="">
+                                        <a href="~/shipment/proxy"><i class="icon-user-following"></i><span> Proxy</span></a>
+                                        <button onclick="location.replace('/shipment/proxy/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li>
+                                        <a href="~/shipment/bookings"><i class="fas fa-ship"></i> <span>Booking</span></a>
+                                        <button onclick="location.replace('/shipment/bookings/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown d-none @ListValues.MenuId.profile_carriers.ToString() @ListValues.MenuId.profile_forwarding_agent.ToString() @ListValues.MenuId.profile_warehouse_provider.ToString() @ListValues.MenuId.profile_customers.ToString() @ListValues.MenuId.profile_vendors.ToString() @ListValues.MenuId.profile_sales_persons.ToString() @ListValues.MenuId.profile_contacts.ToString() @ListValues.MenuId.profile_employees.ToString() @ListValues.MenuId.profile_ports.ToString() @ListValues.MenuId.profile_countries.ToString()">
+                            <a href="#" class=""><i class="icon-users mr-2"></i> <span> Profile</span></a>
+                            <div class="sidebar-submenu">
+                                <ul class="list-unstyled">
+                                    <li class="d-none @ListValues.MenuId.profile_carriers.ToString() ">
+                                        <a href="~/profile/carrier"><i class="icon-user-follow"></i><span> Carriers</span></a>
+                                        <button onclick="location.replace('/profile/carrier/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.profile_forwarding_agent.ToString() ">
+                                        <a href="~/profile/agent"><i class="icon-user-follow"></i><span> Forwarding Agent</span></a>
+                                        <button onclick="location.replace('/profile/agent/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.profile_warehouse_provider.ToString() ">
+                                        <a href="~/profile/provider"><i class="icon-user-follow"></i><span> Warehouse Provider</span></a>
+                                        <button onclick="location.replace('/profile/provider/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.profile_customers.ToString() ">
+                                        <a href="~/profile/customer"><i class="icon-user-follow"></i><span> Customers</span></a>
+                                        <button onclick="location.replace('/profile/customer/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.profile_vendors.ToString() ">
+                                        <a href="~/profile/vendor"><i class="icon-user-follow"></i><span> Vendors</span></a>
+                                        <button onclick="location.replace('/profile/vendor/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.profile_sales_persons.ToString() ">
+                                        <a href="~/profile/salesperson"><i class="icon-user-follow"></i><span> Sales Persons</span></a>
+                                        <button onclick="location.replace('/profile/salesperson/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.profile_contacts.ToString() ">
+                                        <a href="~/profile/contact"><i class="icon-user-follow"></i><span> Contacts</span></a>
+                                        <button onclick="location.replace('/profile/contact/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.profile_employees.ToString() ">
+                                        <a href="~/profile/employee"><i class="icon-user-follow"></i><span> Employees</span></a>
+                                        <button onclick="location.replace('/profile/employee/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.profile_ports.ToString() ">
+                                        <a href="~/profile/ports"><i class="icon-user-follow"></i><span> Ports</span></a>
+                                        <button onclick="location.replace('/profile/ports/e_0');" type="button" title="Add New"><i class="fas fa-plus"></i></button>
+                                    </li>
+                                    @*<li class="d-none @ListValues.MenuId.profile_countries.ToString() ">
+                                <a asp-controller="profile" asp-action="countries"><i class="icon-user-follow"></i><span> Countries</span></a>
+                                </li>*@
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown d-none @ListValues.MenuId.user_list_Page.ToString() @ListValues.MenuId.user_list_allow.ToString() @ListValues.MenuId.user_list_disable.ToString() @ListValues.MenuId.user_list_reset.ToString() @ListValues.MenuId.user_add.ToString() @ListValues.MenuId.roles_Page.ToString() @ListValues.MenuId.roles_add.ToString() @ListValues.MenuId.roles_edit.ToString() @ListValues.MenuId.roles_delete.ToString() @ListValues.MenuId.audit_log_page.ToString()">
+                            <a href="#" class=""><i class="icon-user-follow mr-2"></i> <span> Admin</span></a>
+                            <div class="sidebar-submenu">
+                                <ul class="list-unstyled">
+                                    <li class="d-none @ListValues.MenuId.user_list_Page.ToString() @ListValues.MenuId.user_list_allow.ToString() @ListValues.MenuId.user_list_disable.ToString() @ListValues.MenuId.user_list_reset.ToString() @ListValues.MenuId.user_add.ToString()">
+                                        <a href="~/users/"><i class="icon-user"></i><span> Users</span></a>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.roles_Page.ToString() @ListValues.MenuId.roles_add.ToString() @ListValues.MenuId.roles_edit.ToString() @ListValues.MenuId.roles_delete.ToString()">
+                                        <a href="~/users/role"><i class="icon-target"></i><span> Roles</span></a>
+                                    </li>
+                                    <li class="d-none @ListValues.MenuId.audit_log_page.ToString()">
+                                        <a href="~/users/log"><i class="icon-list"></i><span> Audit Log</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="~/help">
+                    <i class="fa fa-question-circle"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    <span class="badge badge-pill badge-success notification">0</span>
+                </a>
+                <a href="~/logout" title="Logout">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </nav>
+
+        <main class="page-content">
+            <div class="container-fluid">
+
+                <div class="alert alert-success"><i class="fa fa-question-circle"></i> @Html.Raw(msg)</div>
+                <div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> @Html.Raw(err)</div>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="~/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Help</li>
+                    </ol>
+                </nav>
+                
+                <!--
+                <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                                <div class="form-inline rcd">
+                                <h4 class="title text-uppercase"><i class="fas fa-edit"></i> @ViewData["Title"] (<small class="text-secondary">@(Model != null && Model.Id > 0 ? "Update" : "Add")</small>)</h4>
+                                </div>
+
+                                <span class="navbar-text mr-1 ml-auto">
+                                    @if (ViewData["NotNew"] == null)
+                        {
+                                        <button onclick="location.replace('/@rpt/e_0');" title="Add new record" class="btn btn-outline-secondary btn-sm lst"><i class="fa fa-plus"></i></button>
+                        }
+                                    @*<button title="Edit selected record" class="btn btn-outline-secondary btn-sm lst"><i class="fas fa-edit"></i></button>*@
+                                    <button type="button" title="Email selected records to customer" id="btnMailSelected" class="btn btn-outline-secondary btn-sm lst disabled" data-id="" data-target="#mailClient" data-type="@curPage" data-toggle="modal"><i class="fas fa-envelope"></i></button>
+                                    @*<a href="@rpt" title="View record on template" class="btn btn-outline-secondary rcd"><i class="fas fa-eye"></i></a>*@
+                                    <button id="btnDeleteSelected" title="Delete selected record(s)" class="btn btn-outline-secondary btn-sm @disabled"><i class="fas fa-trash"></i></button>
+                                    <a href="~/@curPage" title="Exit editing" class="btn btn-outline-secondary btn-sm rcd px-2"><i class="fa fa-times"></i></a>
+                                </span>
+
+                                <form method="post" class="form-inline small lst" action="~/search">
+                                    <div class="input-group input-group-sm">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-filter"></i></span>
+                                        </div>
+                                        <input name="SearchText" placeholder="Search..." class="form-control form-control-sm border border-right-0" value="@(srch != null ? srch[0] : "")" />
+                                        <select id="SearchDate" name="SearchDate" class="form-control form-control-sm border p-0">
+                                            @if (srch == null || (srch != null && srch[1] == "Last month")) { <option selected>Last month</option> }else{<option>Last month</option>}
+                                            @if (srch != null && srch[1] == "Last week") { <option selected>Last week</option> }else{<option>Last week</option>}
+                                            @if (srch != null && srch[1] == "Yesterday") { <option selected>Yesterday</option> }else{<option>Yesterday</option>}
+                                            @if (srch != null && srch[1] == "Custom") { <option selected>Custom</option> }else{<option>Custom</option>}
+                                            @if (srch != null && srch[1] == "All") { <option selected>All</option> }else{<option>All</option>}
+                                        </select>
+                                        <input id="SearchDateFrom" name="SearchDateFrom" placeholder="From:" class="form-control form-control-sm date border d-none" />
+                                        <input id="SearchDateTo" name="SearchDateTo" placeholder="To:" class="form-control form-control-sm date border d-none" />
+                                        <div class="input-group-append">
+                                            <button type="submit" title="Search" class="btn btn-outline-secondary btn-sm border border-left-0 btnPrs"><i class="fas fa-search"></i></button>
+                                            <button type="button" onclick="location.replace('/@rpt/all');" title="List All Data" class="btn btn-outline-secondary btn-sm border btnPrs"><i class="fas fa-list-alt"></i></button>
+                                        </div>
+                                    </div>
+                                    <input name="SearchLocation" type="hidden" value="@rpt" />
+                                </form>
+                            </nav>
+
+                            <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                                <span class="navbar-text mr-2 ml-auto">
+                                    <a href="~/@curPage/@pageQry" title="Edit this record" class="btn btn-outline-secondary"><i class="fas fa-edit"></i></a>
+                                    <button type="button" title="EMail copy to customer" class="btn btn-outline-secondary" data-id="@pageQryId" data-target="#mailClient" data-type="@curPage" data-toggle="modal"><i class="fas fa-envelope"></i></button>
+                                    <button type="button" title="Print this record" class="btn btn-outline-secondary" data-id="@pageQryId" id="dvPrintReport"><i class="fas fa-print"></i></button>
+                                    <a href="~/@curPage" title="Close and return to list" class="btn btn-outline-secondary"><i class="fas fa-undo"></i></a>
+                                </span>
+                            </nav>
+                -->
+
+                <div class="">
+                    -- content here --
+                    <!-- <div class="row">
+                        <div class="col-md-6">col-md-6</div>
+                        <div class="col-md-6">col-md-6</div>
+                    </div> -->
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer text-center text-muted border-top">
+            <div class="mb-2">
+                <small>
+                    &copy; 2020 - 2024 <a href="#">XYZLogistics Admin</a> | <a href="~/privacy">Privacy</a> &nbsp; &nbsp; <a href="https://www.solhavensystems.com" target="_blank">SolHaven Systems</a>
+                </small>
+            </div>
+        </footer>
+        <input id="SearchCriteria" type="hidden" value="@tmp" />
+    </div>
+
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap-select.min.js"></script>
+
+    <script src="~/js/jquery.datetimepicker.full.min.js"></script>
+
+    <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/dataTables.buttons.min.js"></script>
+    <script src="~/js/jszip.min.js"></script>
+    <script src="~/js/pdfmake.min.js"></script>
+    <script src="~/js/vfs_fonts.js"></script>
+    <script src="~/js/buttons.html5.min.js"></script>
+    <script src="~/js/buttons.print.min.js"></script>
+    <script src="~/js/printThis.js"></script>
+    <script src="~/js/buttons.html5.min.js"></script>
+    <script src="~/js/html2canvas.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+
+        try {
+
+            var role = '.@Utility.RolesStr';
+
+        } catch(e) {
+            console.log(e);
+        }
+
+        $().ready(function(){
+            $('.no-auto-fill').attr('autocomplete', 'off');
+            
+            $('#SearchDate').on('change', function () {
+                if ($(this).val() == 'Custom') $('#SearchDateFrom, #SearchDateTo').removeClass('d-none'); else $('#SearchDateFrom, #SearchDateTo').addClass('d-none');
+            });
+
+            try
+            {
+                $('#btnDeleteSelected').on('click', function(){
+                    alert('Process under review...');
+                });
+                
+                $('#dvPrintReport').on('click', function(){
+                    
+                });
+
+                $(".lst th input[type='checkbox']").on('change', function () {
+                    $(".ctrl input[type='checkbox']").prop("checked", $(this).is(':checked')).change();
+                });
+
+                $(".ctrl input[type='checkbox']").on('change',function(){
+                    var mId = $(this).attr('id').substring(4);
+                    let aId = $('#btnMailSelected').attr('data-id').length > 1 ? $('#btnMailSelected').attr('data-id').split(',') : [];
+                    if(!$(this).is(':checked')) {
+                        $(".lst th input[type='checkbox']").prop("checked", false);
+                        aId = jQuery.grep(aId, function (value) { return value != mId; });
+
+                    } else {
+                        if(!aId.includes(mId) && $.trim(mId) != '') aId.push(mId);
+                    }
+                    $('#btnMailSelected').attr('data-id', aId.join(','));
+                });
+
+                $(".lst th input[type='checkbox'], .ctrl input[type='checkbox']").on('change', function () {
+                    if($(this).is(':checked')) 
+                    {
+                        $('#btnMailSelected, #btnDeleteSelected').removeClass('disabled');
+                    } else {
+                        $('#btnMailSelected, #btnDeleteSelected').addClass('disabled');
+                    }
+                });
+
+                $('.lst table').each(function (i, obj) {
+                    if ($(this).find('tbody tr').length > 1) {
+                        $(this).DataTable({
+                            destroy: true,
+                            dom: 'Blfrtip', buttons: [], buttons: ['csv', 'excel', 'pdf'],
+                            "pageLength": 100
+                        });
+                    }
+                });
+                
+
+                $('.selectpicker2').selectpicker({
+                    liveSearch: true,
+                    maxOptions: 1
+                });
+
+                $('.date').datetimepicker({
+                    format:'Y-m-d',
+                    formatDate:'Y-m-d',
+                    timepicker:false,
+                    //defaultSelect:false
+                });
+
+                $('.datetime').datetimepicker({
+                    format:'Y-m-d H:i:s',
+                    formatTime:'H:i',
+                    formatDate:'Y-m-d'
+                    //defaultSelect:false
+                });
+
+            } catch(e) {
+                console.log(e);
+            }
+        })
+    </script>
+
+</body>
+</html>

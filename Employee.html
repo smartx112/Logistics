@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://xyzlogistics.solhaven.net/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Logistics Adminstrative portal">
+    <meta name="author" content="Emmanuel Ola. Olusola">
+    <meta name="keyword" content="logistics, freight, management, cloud, portal, finance, financial institution, web app">
+
+    <title> Employee</title>
+
+
+    <link rel="icon" href="https://xyzlogistics.solhaven.net/ups//Media/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://xyzlogistics.solhaven.net/ups//Media/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://xyzlogistics.solhaven.net/ups//Media/favicon-180x180.png">
+
+    <link rel="stylesheet" href="./Dashboard - Logistics_files/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="./Dashboard - Logistics_files/bootstrap-grid.min.css" media="all">
+    <link rel="stylesheet" href="./Dashboard - Logistics_files/bootstrap-select.min.css" media="all">
+
+    <link rel="stylesheet" href="./Dashboard - Logistics_files/site.css" media="all">
+    <link rel="stylesheet" href="./Dashboard - Logistics_files/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="./Dashboard - Logistics_files/datatables.min.css" media="all">
+    <link rel="stylesheet" href="./Dashboard - Logistics_files/buttons.dataTables.min.css">
+
+    <link href="./Dashboard - Logistics_files/climacons-font.css" rel="stylesheet" media="all">
+    <link href="./Dashboard - Logistics_files/font-awesome.css" rel="stylesheet" media="all">
+    <link href="./Dashboard - Logistics_files/simple-line-icons.css" rel="stylesheet" media="all">
+    <link href="./Dashboard - Logistics_files/navs.css" rel="stylesheet">
+        <style>
+            .rcd {
+                display: none;
+            }
+        </style>
+    <style>
+        .nowrap{
+            white-space:nowrap !important;
+        }
+        .dt-buttons{
+            margin-right:3em;
+        }
+        .dt-buttons button {
+            border: 1px solid #d0d0d0 !important;
+            border-radius: 3px;
+            margin-right:0.2em !important;
+        }
+
+        .bootstrap-select.form-control {
+            border: 1px solid #ced4da;
+        }
+        .small table{
+            font-size:12px !important;
+        }
+        /*.ctrl{
+            position:relative;
+        }*/
+        .ctrl > * {margin-right:3px;}
+        .ctrl input[type=checkbox]{
+            vertical-align: middle;
+        }
+        tr.align-middle td{
+            vertical-align:middle !important;
+        }
+
+        .text-company {
+            color:#404d96 !important;
+        }
+        .border-company{
+            border-color: #404d9680 !important;
+        }
+        .btn-company{
+            background-color: #404d96 !important;
+        }
+        .btn-company:hover{
+            background-color: #404d9680 !important;
+        }
+        .btn-outline-company{
+            color: #404d96 !important;
+            border-color: #404d96 !important;
+        }
+        .btn-outline-company:hover{
+            color:#fff !important;
+            background-color: #404d96 !important;
+            border-color: #404d96 !important;
+        }
+        .btn-outline-company:focus{
+            box-shadow:0 0 0 0.2rem #404d9625
+        }
+        #dvDimension{
+            max-height:150px ;
+            overflow-y:auto;
+            overflow-x:hidden;
+        }
+        #dvDimension input{
+            text-align:right !important;
+        }
+        #dvDimension .cx{
+            text-decoration:none !important;
+        }
+        .mt_5{
+            margin-top:5px;
+        }
+        .edt{
+            font-weight:bold;
+            font-size:larger;
+        }
+        .no-auto-fill{}
+        .btnPrs{}
+    </style>
+
+    
+    <style>
+        body{
+            background: #e4e5e6;
+        }
+        a{
+            text-decoration:none !important;
+        }
+    </style>
+
+
+    <script src="./Dashboard - Logistics_files/jquery.min.js.download"></script>
+</head>
+<body>
+
+
+    <div b-av3p7791rh="" class="page-wrapper chiller-theme toggled">
+        <a b-av3p7791rh="" id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i b-av3p7791rh="" class="fas fa-bars"></i>
+        </a>
+        
+        <nav b-av3p7791rh="" id="sidebar" class="sidebar-wrapper">
+            <div b-av3p7791rh="" class="sidebar-content">
+                <div b-av3p7791rh="" class="sidebar-brand">
+                    <a href="https://xyzlogistics.solhaven.net/"><img b-av3p7791rh="" src="./Dashboard - Logistics_files/Logo_w.png" height="50"></a>
+                    <div b-av3p7791rh="" id="close-sidebar"><i b-av3p7791rh="" class="fas fa-bars"></i></div>
+                </div>
+                <div b-av3p7791rh="" class="sidebar-header">
+                    <!--<div class="user-pic">
+                        <img class="img-responsive img-rounded" src="media/avatar.png" />
+                    </div> b-av3p7791rh-->
+                    <div b-av3p7791rh="" class="user-info">
+                        <span b-av3p7791rh="" class="user-name"><i b-av3p7791rh="" class="fas fa-user-circle"></i><strong b-av3p7791rh="">&nbsp;&nbsp;Smart Okon</strong></span>
+                        <span b-av3p7791rh="" class="user-role"><i b-av3p7791rh="" class="fas fa-tasks"></i> &nbsp;&nbsp;Administrator</span>
+                    </div>
+                </div>
+                    <div b-av3p7791rh="" class="sidebar-menu">
+                        <ul b-av3p7791rh="" class="">
+                            <li b-av3p7791rh="" class="header-menu">
+                                <span b-av3p7791rh="">General</span>
+                            </li>
+                            <li b-av3p7791rh="" class="">
+                                <a href="Dashboard.html"><i b-av3p7791rh="" class="icon-home"></i><span b-av3p7791rh="">Dashboard</span></a>
+                            </li>
+                            <li b-av3p7791rh="" class="sidebar-dropdown">
+                                <a b-av3p7791rh="" href="#" class=""><i b-av3p7791rh="" class="icon-control-forward mr-2"></i> <span b-av3p7791rh=""> Warehouse</span></a>
+                                <div b-av3p7791rh="" class="sidebar-submenu">
+                                    <ul b-av3p7791rh="" class="list-unstyled">
+                                        <li b-av3p7791rh="">
+                                            <a href="delivery.html">
+                                                <i b-av3p7791rh="" class="icon-basket-loaded"></i><span b-av3p7791rh=""> Courier Delivery</span>
+                                            </a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/warehouse/delivery/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="">
+                                            <a href="receipt.html">
+                                                <i b-av3p7791rh="" class="icon-target"></i>
+                                                <span b-av3p7791rh=""> Warehouse Receipt</span>
+                                            </a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/warehouse/receipt/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li b-av3p7791rh="" class="sidebar-dropdown">
+                                <a b-av3p7791rh="" href="#" class=""><i b-av3p7791rh="" class="icon-credit-card mr-2"></i> <span b-av3p7791rh=""> Account</span></a>
+                                <div b-av3p7791rh="" class="sidebar-submenu">
+                                    <ul b-av3p7791rh="" class="list-unstyled">
+                                        <li b-av3p7791rh="" class="account_invoice account_invoice_air account_invoice_ocean account_invoice_others account_invoice_generate account_invoice_delete account_invoice_update">
+                                            <a href="invoice.html"><i b-av3p7791rh="" class="icon-book-open"></i><span b-av3p7791rh=""> Invoice</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/account/invoice/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="account_payment account_payment_add account_payment_edit account_payment_delete">
+                                            <a href="payments.html"><i b-av3p7791rh="" class="icon-wallet"></i><span b-av3p7791rh=""> Payment</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/account/payments/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li b-av3p7791rh="" class="sidebar-dropdown">
+                                <a b-av3p7791rh="" href="#" class=""><i b-av3p7791rh="" class="icon-rocket mr-2"></i> <span b-av3p7791rh=""> Shipments</span></a>
+                                <div b-av3p7791rh="" class="sidebar-submenu">
+                                    <ul b-av3p7791rh="" class="list-unstyled">
+                                        <li b-av3p7791rh="" class="">
+                                            <a href="airwaybill.html"><i b-av3p7791rh="" class="icon-doc"></i><span b-av3p7791rh=""> Air WayBill</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/shipment/airwaybill/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="">
+                                            <a href="proxy.html"><i b-av3p7791rh="" class="icon-user-following"></i><span b-av3p7791rh=""> Proxy</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/shipment/proxy/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="">
+                                            <a href="bookings.html"><i b-av3p7791rh="" class="fas fa-ship"></i> <span b-av3p7791rh="">Booking</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/shipment/bookings/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li b-av3p7791rh="" class="sidebar-dropdown profile_carriers profile_forwarding_agent profile_warehouse_provider profile_customers profile_vendors profile_sales_persons profile_contacts profile_employees profile_ports profile_countries">
+                                <a b-av3p7791rh="" href="#" class=""><i b-av3p7791rh="" class="icon-users mr-2"></i> <span b-av3p7791rh=""> Profile</span></a>
+                                <div b-av3p7791rh="" class="sidebar-submenu">
+                                    <ul b-av3p7791rh="" class="list-unstyled">
+                                        <li b-av3p7791rh="" class="profile_carriers">
+                                            <a href="carrier.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Carriers</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/carrier/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="profile_forwarding_agent">
+                                            <a href="agent.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Forwarding Agent</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/agent/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="profile_warehouse_provider">
+                                            <a href="provider.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Warehouse Provider</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/provider/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="profile_customers">
+                                            <a href="customer.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Customers</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/customer/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="profile_vendors">
+                                            <a href="vendor.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Vendors</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/vendor/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="profile_sales_persons">
+                                            <a href="salesperson.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Sales Persons</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/salesperson/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="profile_contacts">
+                                            <a href="contact.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Contacts</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/contact/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="profile_employees">
+                                            <a href="employee.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Employees</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/employee/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                        <li b-av3p7791rh="" class="profile_ports">
+                                            <a href="ports.html"><i b-av3p7791rh="" class="icon-user-follow"></i><span b-av3p7791rh=""> Ports</span></a>
+                                            <button b-av3p7791rh="" onclick="location.replace(&#39;/profile/ports/e_0&#39;);" type="button" title="Add New"><i b-av3p7791rh="" class="fas fa-plus"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li b-av3p7791rh="" class="sidebar-dropdown user_list_Page user_list_allow user_list_disable user_list_reset user_add roles_Page roles_add roles_edit roles_delete audit_log_page">
+                                <a b-av3p7791rh="" href="#" class=""><i b-av3p7791rh="" class="icon-user-follow mr-2"></i> <span b-av3p7791rh=""> Admin</span></a>
+                                <div b-av3p7791rh="" class="sidebar-submenu">
+                                    <ul b-av3p7791rh="" class="list-unstyled">
+                                        <li b-av3p7791rh="" class="user_list_Page user_list_allow user_list_disable user_list_reset user_add">
+                                            <a href="users.html"><i b-av3p7791rh="" class="icon-user"></i><span b-av3p7791rh=""> Users</span></a>
+                                        </li>
+                                        <li b-av3p7791rh="" class="roles_Page roles_add roles_edit roles_delete">
+                                            <a href="role.html"><i b-av3p7791rh="" class="icon-target"></i><span b-av3p7791rh=""> Roles</span></a>
+                                        </li>
+                                        <li b-av3p7791rh="" class="audit_log_page">
+                                            <a href="log.html"><i b-av3p7791rh="" class="icon-list"></i><span b-av3p7791rh=""> Audit Log</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+
+            <div b-av3p7791rh="" class="sidebar-footer">
+                <a href="Dashboard.html">
+                    <i b-av3p7791rh="" class="fa fa-question-circle"></i>
+                </a>
+                <a b-av3p7791rh="" href="#">
+                    <i b-av3p7791rh="" class="fa fa-envelope"></i>
+                    <span b-av3p7791rh="" class="badge badge-pill badge-success notification">0</span>
+                </a>
+                <a href="logout.html" title="Logout">
+                    <i b-av3p7791rh="" class="fa fa-power-off"></i>
+                </a>
+            </div>
+        </nav>
+
+        <main b-av3p7791rh="" class="page-content">
+            <div b-av3p7791rh="" class="container-fluid">
+
+                                    <nav b-av3p7791rh="" aria-label="breadcrumb">
+                                        <ol b-av3p7791rh="" class="breadcrumb">
+                                            <li b-av3p7791rh="" class="breadcrumb-item"><a href="Dashboard.html">Home</a></li>
+                                            <li b-av3p7791rh="" class="breadcrumb-item active" aria-current="page"> Employee</li>
+                                        </ol>
+                                </nav>
+
+                
+   <!-- <div class="row dashboard_Page">
+        <div class="col-lg-12 col-md-12">
+            <ul class="statistics">
+                <li class="li dashboard_invoice_raised">
+                    <a href="https://xyzlogistics.solhaven.net/">
+                        <i class="icon-note"></i>
+                        <div class="number">0</div>
+                        <div class="title">Invoice raised</div>
+                    </a>
+                </li>
+                <li class="li dashboard_awaiting_pickup">
+                    <a href="https://xyzlogistics.solhaven.net/">
+                        <i class="icon-check"></i>
+                        <div class="number">0</div>
+                        <div class="title" title="">Awaiting Pickup</div>
+                    </a>
+                </li>
+                <li class="li dashboard_transactions">
+                    <a href="https://xyzlogistics.solhaven.net/">
+                        <i class="icon-book-open"></i>
+                        <div class="number">0</div>
+                        <div class="title" title="">Transactions</div>
+                    </a>
+                </li>
+                <li class="li dashboard_active_Users">
+                    <a href="https://xyzlogistics.solhaven.net/users">
+                        <i class="icon-users"></i>
+                        <div class="number">2</div>
+                        <div class="title" title="">Activated User(s)</div>
+                    </a>
+                </li>
+            </ul>
+
+            <h5>Counts</h5>
+
+            <ul class="statistics">
+                <li class="li dashboard_new_registration">
+                    <a href="https://xyzlogistics.solhaven.net/register">
+                        <i class="fas fa-user-plus"></i>
+                        <div class="number">1</div>
+                        <div class="title">New Registration(s)</div>
+                    </a>
+                </li>
+                <li class="li dashboard_payment_today">
+                    <a href="https://xyzlogistics.solhaven.net/">
+                        <i class="icon-credit-card"></i>
+                        <div class="number">0</div>
+                        <div class="title" title="">Payment Today</div>
+                    </a>
+                </li>
+                <li class="li dashboard_sms_units">
+                    <a href="#">
+                        <i class="icon-call-out"></i>
+                        <div class="number">0</div>
+                        <div class="title" title="">SMS Units</div>
+                    </a>
+                </li>
+                <li class="li dashboard_server_prompts">
+                    <a href="#">
+                        <i class="icon-envelope"></i>
+                        <div class="number">0</div>
+                        <div class="title" title="">Server prompts</div>
+                    </a>
+                </li>
+                <li class="li dashboard_active_customers">
+                    <a href="https://xyzlogistics.solhaven.net/profile/customer">
+                        <i class="icon-user-following"></i>
+                        <div class="number">1</div>
+                        <div class="title" title="">Confirmed Customer(s)</div>
+                    </a>
+                </li>
+                <li class="li dashboard_disabled_customers">
+                    <a href="#">
+                        <i class="icon-user-unfollow"></i>
+                        <div class="number">0</div>
+                        <div class="title" title="">Disabled Customer(s)</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <div>
+        <h4>EMPLOYEE</h4>
+        The Employee submenu within the Profile menu allows users to create and manage proxies for products or services provided to customers. Users can generate professional-looking invoices, specify item details, set payment terms, and track payment status. 
+        This feature streamlines the process and helps ensure timely and accurate billing.
+        <br> <centre> <img src="images\carrier.jpg"></centre>
+        <p>
+            <h4>Add Employees</h4>
+        To add Employee:
+       <br> 1. Click the + sign to launch the Add Invoice window
+       <br>2. Select the preferred shipper, cosignee and supplier as the case maybe
+       <br> 3. Select and fill all other relevant field
+       <br> 4. Click Save to save receipt
+        <br><img src="images\Receipt_add.jpg">
+        <p></p>Note after save the number of receipt saved icreases and the $ sign means invoice yet to be created
+        <br> <centre> <img src="images\invoice_ico.jpg"></centre>
+       <h4>Add Receipt</h4>
+       
+        <br></div>
+       
+        </div>  
+        <tbody>
+
+
+                    <div b-av3p7791rh="" class="modal fade" id="profileForm" role="dialog">
+                        <div b-av3p7791rh="" class="modal-dialog modal-lg">
+                            <div b-av3p7791rh="" class="modal-content small">
+                                <div b-av3p7791rh="" class="modal-header">
+                                    <h5 b-av3p7791rh="" class="modal-title">Add <span b-av3p7791rh="" id="spProfileType"></span> Profile</h5>
+                                    <button b-av3p7791rh="" type="button" class="close" data-dismiss="modal">×</button>
+                                </div>
+                                <div b-av3p7791rh="" class="modal-body">
+                                    <div b-av3p7791rh="" id="dvProfileContact" class="p-0 m-0">
+                                        
+
+<div class="card">
+    <div class="card-header pb-0">
+        <div class="card-heading">
+            <ul class="nav nav-tabs justify-content-end border-bottom-0" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#cnGeneral" role="tab">General</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#cnAddress" role="tab">Addresses</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body" id="frmContact">
+        <div class="tab-content mt-2" style="min-height:250px;">
+            <div id="cnGeneral" class="tab-pane fade show in active">
+                <div class="form-row">
+                    <input id="ctrl" name="ctrl" type="hidden" value="">
+                    <input data-val="true" data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="0">
+                    <input id="Type" name="Type" type="hidden" value="">
+                    <input id="Onboarded" name="Onboarded" type="hidden" value="">
+                    <input id="OnboardedBy" name="OnboardedBy" type="hidden" value="">
+                    <input id="EntryPoint" name="EntryPoint" type="hidden" value="">
+                    <input id="DateOnboarded" name="DateOnboarded" type="hidden" value="">
+                    <input data-val="true" data-val-required="The CreatedBy field is required." id="CreatedBy" name="CreatedBy" type="hidden" value="0">
+                    <input id="DateCreated" name="DateCreated" type="hidden" value="">
+                    <input id="Role" name="Role" type="hidden" value="">
+                    <input id="LastLogin" name="LastLogin" type="hidden" value="">
+                    <input id="Status" name="Status" type="hidden" value="">
+                    <input id="Active" name="Active" type="hidden" value="">
+
+                    <div class="col-md-4 form-group order-1">
+                        <label class="mb-0" for="Name">Name:</label>
+                        <input class="form-control form-control-sm" id="Name" name="Name" type="text" value="">
+                    </div>
+
+                    <div class="col-md-4 form-group">
+                        <label class="mb-0" for="FirstName">Fisrtname:</label>
+                        <input class="form-control form-control-sm nm" data-val="true" data-val-required="First Name is required" id="FirstName" name="FirstName" type="text" value="">
+                    </div>
+
+                    <div class="col-md-4 form-group">
+                        <label class="mb-0" for="LastName">Lastname:</label>
+                        <input class="form-control form-control-sm nm" id="LastName" name="LastName" type="text" value="">
+                    </div>
+                </div>
+                <div class="form-row">
+
+                    <div class="col-md-4 form-group">
+                        <label class="mb-0" for="EntityId">Dashboard ID</label>
+                        <div class="form-control form-control-sm"></div>
+                        <input id="EntityId" name="EntityId" type="hidden" value="">
+                    </div>
+
+                    <div class="col-md-4 form-group">
+                        <label class="mb-0" for="Phone">Telephone</label>
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-sm w-50" type="text" id="Phone" name="Phone" value="">
+                            <div class="input-group-append">
+                                <div class="input-group-text">Ext:</div>
+                            </div>
+                            <input class="form-control form-control-sm" type="text" id="PhoneExt" name="PhoneExt" value="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 form-group">
+                        <label class="mb-0" for="MobilePhone">Mobile Phone</label>
+                        <input class="form-control form-control-sm" data-val="true" data-val-phone="Invalid Phone Number" id="MobilePhone" name="MobilePhone" type="text" value="">
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="mb-0" for="Fax">Fax:</label>
+                        <input class="form-control form-control-sm" data-val="true" data-val-phone="Invalid Fax Number" id="Fax" name="Fax" type="text" value="">
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="mb-0" for="Email">Email:</label>
+                        <input class="form-control form-control-sm" data-val="true" data-val-regex="Invalid Email Address" data-val-regex-pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$" id="Email" name="Email" type="email" value="">
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label class="mb-0" for="Website">Website:</label>
+                        <input class="form-control form-control-sm" id="Website" name="Website" type="text" value="">
+                    </div>
+
+                    <div id="dvLinkedCustomer" class="col-md-8 form-group invisible">
+                        <label class="mb-0" for="LinkedCustomerId">Linked Customer Account:</label>
+                        <div class="dropdown bootstrap-select form-control form-control-sm 2"><select class="form-control form-control-sm selectpicker2" id="LinkedCustomerId" name="LinkedCustomerId" tabindex="-98">
+                            <option disabled="" selected="">-Select Customer-</option>
+                        <option value="7344">Dare Alade [hopealade@gmail.com] - RNL000010</option>
+</select><button type="button" class="btn dropdown-toggle btn-light bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" data-id="LinkedCustomerId" title="-Select Customer-"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">-Select Customer-</div></div> </div></button><div class="dropdown-menu "><div class="bs-searchbox"><input type="search" class="form-control" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-1" aria-autocomplete="list"></div><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                    </div>
+                    
+
+                </div>
+            </div>
+
+            <div id="cnAddress" class="tab-pane fade" role="tabpanel">
+                <div class="form-row">
+                    <div class="col-md-7">
+                        <div class="form-row">
+                            <div class="col-12 form-group">
+                                <label class="mb-0" for="Address">Address:</label>
+                                <textarea class="form-control form-control-sm" id="Address" name="Address"></textarea>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label class="mb-0" for="CountryId">Country:</label>
+                                <select data-stateid="State" class="form-control form-control-sm Country" id="CountryId" name="CountryId"><option value="1">Afghanistan [AF]</option>
+<option value="3">Albania [AL]</option>
+<option value="4">Algeria [DZ]</option>
+<option value="6">Andorra [AD]</option>
+<option value="7">Angola [AO]</option>
+<option value="10">Antigua And Barbuda [AG]</option>
+<option value="11">Argentina [AR]</option>
+<option value="12">Armenia [AM]</option>
+<option value="14">Australia [AU]</option>
+<option value="15">Austria [AT]</option>
+<option value="16">Azerbaijan [AZ]</option>
+<option value="18">Bahrain [BH]</option>
+<option value="19">Bangladesh [BD]</option>
+<option value="20">Barbados [BB]</option>
+<option value="21">Belarus [BY]</option>
+<option value="22">Belgium [BE]</option>
+<option value="23">Belize [BZ]</option>
+<option value="24">Benin [BJ]</option>
+<option value="25">Bermuda [BM]</option>
+<option value="26">Bhutan [BT]</option>
+<option value="27">Bolivia [BO]</option>
+<option value="155">Bonaire, Sint Eustatius and Saba [BQ]</option>
+<option value="28">Bosnia and Herzegovina [BA]</option>
+<option value="29">Botswana [BW]</option>
+<option value="31">Brazil [BR]</option>
+<option value="33">Brunei [BN]</option>
+<option value="34">Bulgaria [BG]</option>
+<option value="35">Burkina Faso [BF]</option>
+<option value="36">Burundi [BI]</option>
+<option value="37">Cambodia [KH]</option>
+<option value="38">Cameroon [CM]</option>
+<option value="39">Canada [CA]</option>
+<option value="40">Cape Verde [CV]</option>
+<option value="42">Central African Republic [CF]</option>
+<option value="43">Chad [TD]</option>
+<option value="44">Chile [CL]</option>
+<option value="45">China [CN]</option>
+<option value="48">Colombia [CO]</option>
+<option value="49">Comoros [KM]</option>
+<option value="50">Congo [CG]</option>
+<option value="53">Costa Rica [CR]</option>
+<option value="54">Cote D'Ivoire (Ivory Coast) [CI]</option>
+<option value="55">Croatia [HR]</option>
+<option value="56">Cuba [CU]</option>
+<option value="57">Cyprus [CY]</option>
+<option value="58">Czech Republic [CZ]</option>
+<option value="51">Democratic Republic of the Congo [CD]</option>
+<option value="59">Denmark [DK]</option>
+<option value="60">Djibouti [DJ]</option>
+<option value="61">Dominica [DM]</option>
+<option value="62">Dominican Republic [DO]</option>
+<option value="63">East Timor [TL]</option>
+<option value="64">Ecuador [EC]</option>
+<option value="65">Egypt [EG]</option>
+<option value="66">El Salvador [SV]</option>
+<option value="67">Equatorial Guinea [GQ]</option>
+<option value="68">Eritrea [ER]</option>
+<option value="69">Estonia [EE]</option>
+<option value="70">Ethiopia [ET]</option>
+<option value="73">Fiji Islands [FJ]</option>
+<option value="74">Finland [FI]</option>
+<option value="75">France [FR]</option>
+<option value="79">Gabon [GA]</option>
+<option value="80">Gambia The [GM]</option>
+<option value="81">Georgia [GE]</option>
+<option value="82">Germany [DE]</option>
+<option value="83">Ghana [GH]</option>
+<option value="85">Greece [GR]</option>
+<option value="87">Grenada [GD]</option>
+<option value="90">Guatemala [GT]</option>
+<option value="92">Guinea [GN]</option>
+<option value="93">Guinea-Bissau [GW]</option>
+<option value="94">Guyana [GY]</option>
+<option value="95">Haiti [HT]</option>
+<option value="97">Honduras [HN]</option>
+<option value="98">Hong Kong S.A.R. [HK]</option>
+<option value="99">Hungary [HU]</option>
+<option value="100">Iceland [IS]</option>
+<option value="101">India [IN]</option>
+<option value="102">Indonesia [ID]</option>
+<option value="103">Iran [IR]</option>
+<option value="104">Iraq [IQ]</option>
+<option value="105">Ireland [IE]</option>
+<option value="106">Israel [IL]</option>
+<option value="107">Italy [IT]</option>
+<option value="108">Jamaica [JM]</option>
+<option value="109">Japan [JP]</option>
+<option value="111">Jordan [JO]</option>
+<option value="112">Kazakhstan [KZ]</option>
+<option value="113">Kenya [KE]</option>
+<option value="114">Kiribati [KI]</option>
+<option value="248">Kosovo [XK]</option>
+<option value="117">Kuwait [KW]</option>
+<option value="118">Kyrgyzstan [KG]</option>
+<option value="119">Laos [LA]</option>
+<option value="120">Latvia [LV]</option>
+<option value="121">Lebanon [LB]</option>
+<option value="122">Lesotho [LS]</option>
+<option value="123">Liberia [LR]</option>
+<option value="124">Libya [LY]</option>
+<option value="125">Liechtenstein [LI]</option>
+<option value="126">Lithuania [LT]</option>
+<option value="127">Luxembourg [LU]</option>
+<option value="130">Madagascar [MG]</option>
+<option value="131">Malawi [MW]</option>
+<option value="132">Malaysia [MY]</option>
+<option value="133">Maldives [MV]</option>
+<option value="134">Mali [ML]</option>
+<option value="135">Malta [MT]</option>
+<option value="137">Marshall Islands [MH]</option>
+<option value="139">Mauritania [MR]</option>
+<option value="140">Mauritius [MU]</option>
+<option value="142">Mexico [MX]</option>
+<option value="143">Micronesia [FM]</option>
+<option value="144">Moldova [MD]</option>
+<option value="145">Monaco [MC]</option>
+<option value="146">Mongolia [MN]</option>
+<option value="147">Montenegro [ME]</option>
+<option value="149">Morocco [MA]</option>
+<option value="150">Mozambique [MZ]</option>
+<option value="151">Myanmar [MM]</option>
+<option value="152">Namibia [NA]</option>
+<option value="153">Nauru [NR]</option>
+<option value="154">Nepal [NP]</option>
+<option value="156">Netherlands [NL]</option>
+<option value="158">New Zealand [NZ]</option>
+<option value="159">Nicaragua [NI]</option>
+<option value="160">Niger [NE]</option>
+<option value="161">Nigeria [NG]</option>
+<option value="115">North Korea [KP]</option>
+<option value="129">North Macedonia [MK]</option>
+<option value="165">Norway [NO]</option>
+<option value="166">Oman [OM]</option>
+<option value="167">Pakistan [PK]</option>
+<option value="168">Palau [PW]</option>
+<option value="169">Palestinian Territory Occupied [PS]</option>
+<option value="170">Panama [PA]</option>
+<option value="171">Papua new Guinea [PG]</option>
+<option value="172">Paraguay [PY]</option>
+<option value="173">Peru [PE]</option>
+<option value="174">Philippines [PH]</option>
+<option value="176">Poland [PL]</option>
+<option value="177">Portugal [PT]</option>
+<option value="178">Puerto Rico [PR]</option>
+<option value="179">Qatar [QA]</option>
+<option value="181">Romania [RO]</option>
+<option value="182">Russia [RU]</option>
+<option value="183">Rwanda [RW]</option>
+<option value="185">Saint Kitts And Nevis [KN]</option>
+<option value="186">Saint Lucia [LC]</option>
+<option value="188">Saint Vincent And The Grenadines [VC]</option>
+<option value="191">Samoa [WS]</option>
+<option value="192">San Marino [SM]</option>
+<option value="193">Sao Tome and Principe [ST]</option>
+<option value="194">Saudi Arabia [SA]</option>
+<option value="195">Senegal [SN]</option>
+<option value="196">Serbia [RS]</option>
+<option value="197">Seychelles [SC]</option>
+<option value="198">Sierra Leone [SL]</option>
+<option value="199">Singapore [SG]</option>
+<option value="200">Slovakia [SK]</option>
+<option value="201">Slovenia [SI]</option>
+<option value="202">Solomon Islands [SB]</option>
+<option value="203">Somalia [SO]</option>
+<option value="204">South Africa [ZA]</option>
+<option value="116">South Korea [KR]</option>
+<option value="206">South Sudan [SS]</option>
+<option value="207">Spain [ES]</option>
+<option value="208">Sri Lanka [LK]</option>
+<option value="209">Sudan [SD]</option>
+<option value="210">Suriname [SR]</option>
+<option value="212">Swaziland [SZ]</option>
+<option value="213">Sweden [SE]</option>
+<option value="214">Switzerland [CH]</option>
+<option value="215">Syria [SY]</option>
+<option value="216">Taiwan [TW]</option>
+<option value="217">Tajikistan [TJ]</option>
+<option value="218">Tanzania [TZ]</option>
+<option value="219">Thailand [TH]</option>
+<option value="17">The Bahamas [BS]</option>
+<option value="220">Togo [TG]</option>
+<option value="222">Tonga [TO]</option>
+<option value="223">Trinidad And Tobago [TT]</option>
+<option value="224">Tunisia [TN]</option>
+<option value="225">Turkey [TR]</option>
+<option value="226">Turkmenistan [TM]</option>
+<option value="228">Tuvalu [TV]</option>
+<option value="229">Uganda [UG]</option>
+<option value="230">Ukraine [UA]</option>
+<option value="231">United Arab Emirates [AE]</option>
+<option value="232">United Kingdom [GB]</option>
+<option selected="selected" value="233">United States [US]</option>
+<option value="234">United States Minor Outlying Islands [UM]</option>
+<option value="235">Uruguay [UY]</option>
+<option value="236">Uzbekistan [UZ]</option>
+<option value="237">Vanuatu [VU]</option>
+<option value="239">Venezuela [VE]</option>
+<option value="240">Vietnam [VN]</option>
+<option value="242">Virgin Islands (US) [VI]</option>
+<option value="245">Yemen [YE]</option>
+<option value="246">Zambia [ZM]</option>
+<option value="247">Zimbabwe [ZW]</option>
+</select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label class="mb-0" for="State">State:</label>
+                                <select class="form-control form-control-sm" id="State" name="State"><option value="1456">Alabama</option>
+<option value="1400">Alaska</option>
+<option value="1424">American Samoa</option>
+<option value="1434">Arizona</option>
+<option value="1444">Arkansas</option>
+<option value="1402">Baker Island</option>
+<option value="1416">California</option>
+<option value="1450">Colorado</option>
+<option value="1435">Connecticut</option>
+<option value="1399">Delaware</option>
+<option value="1437">District of Columbia</option>
+<option value="1436">Florida</option>
+<option value="1455">Georgia</option>
+<option value="1412">Guam</option>
+<option value="1411">Hawaii</option>
+<option value="1398">Howland Island</option>
+<option value="1460">Idaho</option>
+<option value="1425">Illinois</option>
+<option value="1440">Indiana</option>
+<option value="1459">Iowa</option>
+<option value="1410">Jarvis Island</option>
+<option value="1428">Johnston Atoll</option>
+<option value="1406">Kansas</option>
+<option value="1419">Kentucky</option>
+<option value="1403">Kingman Reef</option>
+<option value="1457">Louisiana</option>
+<option value="1453">Maine</option>
+<option value="1401">Maryland</option>
+<option value="1433">Massachusetts</option>
+<option value="1426">Michigan</option>
+<option value="1438">Midway Atoll</option>
+<option value="1420">Minnesota</option>
+<option value="1430">Mississippi</option>
+<option value="1451">Missouri</option>
+<option value="1446">Montana</option>
+<option value="1439">Navassa Island</option>
+<option value="1408">Nebraska</option>
+<option value="1458">Nevada</option>
+<option value="1404">New Hampshire</option>
+<option value="1417">New Jersey</option>
+<option value="1423">New Mexico</option>
+<option value="1452">New York</option>
+<option value="1447">North Carolina</option>
+<option value="1418">North Dakota</option>
+<option value="1431">Northern Mariana Islands</option>
+<option value="4851">Ohio</option>
+<option value="1421">Oklahoma</option>
+<option value="1415">Oregon</option>
+<option value="1448">Palmyra Atoll</option>
+<option value="1422">Pennsylvania</option>
+<option value="1449">Puerto Rico</option>
+<option value="1461">Rhode Island</option>
+<option value="1443">South Carolina</option>
+<option value="1445">South Dakota</option>
+<option value="1454">Tennessee</option>
+<option value="1407">Texas</option>
+<option value="1432">United States Minor Outlying Islands</option>
+<option value="1413">United States Virgin Islands</option>
+<option value="1414">Utah</option>
+<option value="1409">Vermont</option>
+<option value="1427">Virginia</option>
+<option value="1405">Wake Island</option>
+<option value="1462">Washington</option>
+<option value="1429">West Virginia</option>
+<option value="1441">Wisconsin</option>
+<option value="1442">Wyoming</option>
+</select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label class="mb-0" for="City">City:</label>
+                                <input class="form-control form-control-sm" id="City" name="City" type="text" value="">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label class="mb-0" for="ZipCode">Zip Code:</label>
+                                <input class="form-control form-control-sm" id="ZipCode" name="ZipCode" type="text" value="">
+                            </div>
+                            <div class="col-12 form-group">
+                                <label class="mb-0" for="PortId">Port:</label>
+                                <select class="form-control form-control-sm" id="PortId" name="PortId"><option value="">-select-</option>
+<option value="27">Apapa [Nigeria]</option>
+<option value="28">Lekki Free Zone [Nigeria]</option>
+</select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <label class="mb-0">Other Addresses</label>
+                        
+
+<button type="button" class="ml-3 text-secondary border-0 p-0 bg-transparent" data-id="0" data-toggle="modal" data-target="#addressForm" title="Add New"><i class="icon-plus"></i></button>
+
+<div class="table-responsive" style="">
+    <table class="table table-sm table-hover">
+        <tbody id="addressList">
+        </tbody>
+    </table>
+    
+</div>
+
+<div class="modal fade" id="addressForm" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Address</h4>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="frmAddress" class="form-row">
+                    <input type="hidden" data-val="true" data-val-required="The AddrSource field is required." id="AddrSource" name="AddrSource" value="">
+                    <input type="hidden" data-val="true" data-val-required="The AddrSourceId field is required." id="AddrSourceId" name="AddrSourceId" value="0">
+                    <input type="hidden" id="AddrCreated" name="AddrCreated" value="">
+                    <input type="hidden" id="AddrCreatedBy" name="AddrCreatedBy" value="">
+                    
+                    <div class="col-md-6 form-group">
+                        <label class="mb-0" for="AddrLine1">Address</label>
+                        <span class="form-inline small float-right">Order:<input type="text" class="border-0" id="AddrOrders" name="AddrOrders" value=""></span><span class="clearfix"></span>
+                        <input class="form-control form-control-sm" type="text" id="AddrLine1" name="AddrLine1" value="">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label class="mb-0" for="AddrCountryId">Country</label>
+                        <select data-stateid="AddrStateId" class="form-control form-control-sm Country" id="AddrCountryId" name="AddrCountryId">-select-<option value="1">Afghanistan [AF]</option>
+<option value="3">Albania [AL]</option>
+<option value="4">Algeria [DZ]</option>
+<option value="6">Andorra [AD]</option>
+<option value="7">Angola [AO]</option>
+<option value="10">Antigua And Barbuda [AG]</option>
+<option value="11">Argentina [AR]</option>
+<option value="12">Armenia [AM]</option>
+<option value="14">Australia [AU]</option>
+<option value="15">Austria [AT]</option>
+<option value="16">Azerbaijan [AZ]</option>
+<option value="18">Bahrain [BH]</option>
+<option value="19">Bangladesh [BD]</option>
+<option value="20">Barbados [BB]</option>
+<option value="21">Belarus [BY]</option>
+<option value="22">Belgium [BE]</option>
+<option value="23">Belize [BZ]</option>
+<option value="24">Benin [BJ]</option>
+<option value="25">Bermuda [BM]</option>
+<option value="26">Bhutan [BT]</option>
+<option value="27">Bolivia [BO]</option>
+<option value="155">Bonaire, Sint Eustatius and Saba [BQ]</option>
+<option value="28">Bosnia and Herzegovina [BA]</option>
+<option value="29">Botswana [BW]</option>
+<option value="31">Brazil [BR]</option>
+<option value="33">Brunei [BN]</option>
+<option value="34">Bulgaria [BG]</option>
+<option value="35">Burkina Faso [BF]</option>
+<option value="36">Burundi [BI]</option>
+<option value="37">Cambodia [KH]</option>
+<option value="38">Cameroon [CM]</option>
+<option value="39">Canada [CA]</option>
+<option value="40">Cape Verde [CV]</option>
+<option value="42">Central African Republic [CF]</option>
+<option value="43">Chad [TD]</option>
+<option value="44">Chile [CL]</option>
+<option value="45">China [CN]</option>
+<option value="48">Colombia [CO]</option>
+<option value="49">Comoros [KM]</option>
+<option value="50">Congo [CG]</option>
+<option value="53">Costa Rica [CR]</option>
+<option value="54">Cote D'Ivoire (Ivory Coast) [CI]</option>
+<option value="55">Croatia [HR]</option>
+<option value="56">Cuba [CU]</option>
+<option value="57">Cyprus [CY]</option>
+<option value="58">Czech Republic [CZ]</option>
+<option value="51">Democratic Republic of the Congo [CD]</option>
+<option value="59">Denmark [DK]</option>
+<option value="60">Djibouti [DJ]</option>
+<option value="61">Dominica [DM]</option>
+<option value="62">Dominican Republic [DO]</option>
+<option value="63">East Timor [TL]</option>
+<option value="64">Ecuador [EC]</option>
+<option value="65">Egypt [EG]</option>
+<option value="66">El Salvador [SV]</option>
+<option value="67">Equatorial Guinea [GQ]</option>
+<option value="68">Eritrea [ER]</option>
+<option value="69">Estonia [EE]</option>
+<option value="70">Ethiopia [ET]</option>
+<option value="73">Fiji Islands [FJ]</option>
+<option value="74">Finland [FI]</option>
+<option value="75">France [FR]</option>
+<option value="79">Gabon [GA]</option>
+<option value="80">Gambia The [GM]</option>
+<option value="81">Georgia [GE]</option>
+<option value="82">Germany [DE]</option>
+<option value="83">Ghana [GH]</option>
+<option value="85">Greece [GR]</option>
+<option value="87">Grenada [GD]</option>
+<option value="90">Guatemala [GT]</option>
+<option value="92">Guinea [GN]</option>
+<option value="93">Guinea-Bissau [GW]</option>
+<option value="94">Guyana [GY]</option>
+<option value="95">Haiti [HT]</option>
+<option value="97">Honduras [HN]</option>
+<option value="98">Hong Kong S.A.R. [HK]</option>
+<option value="99">Hungary [HU]</option>
+<option value="100">Iceland [IS]</option>
+<option value="101">India [IN]</option>
+<option value="102">Indonesia [ID]</option>
+<option value="103">Iran [IR]</option>
+<option value="104">Iraq [IQ]</option>
+<option value="105">Ireland [IE]</option>
+<option value="106">Israel [IL]</option>
+<option value="107">Italy [IT]</option>
+<option value="108">Jamaica [JM]</option>
+<option value="109">Japan [JP]</option>
+<option value="111">Jordan [JO]</option>
+<option value="112">Kazakhstan [KZ]</option>
+<option value="113">Kenya [KE]</option>
+<option value="114">Kiribati [KI]</option>
+<option value="248">Kosovo [XK]</option>
+<option value="117">Kuwait [KW]</option>
+<option value="118">Kyrgyzstan [KG]</option>
+<option value="119">Laos [LA]</option>
+<option value="120">Latvia [LV]</option>
+<option value="121">Lebanon [LB]</option>
+<option value="122">Lesotho [LS]</option>
+<option value="123">Liberia [LR]</option>
+<option value="124">Libya [LY]</option>
+<option value="125">Liechtenstein [LI]</option>
+<option value="126">Lithuania [LT]</option>
+<option value="127">Luxembourg [LU]</option>
+<option value="130">Madagascar [MG]</option>
+<option value="131">Malawi [MW]</option>
+<option value="132">Malaysia [MY]</option>
+<option value="133">Maldives [MV]</option>
+<option value="134">Mali [ML]</option>
+<option value="135">Malta [MT]</option>
+<option value="137">Marshall Islands [MH]</option>
+<option value="139">Mauritania [MR]</option>
+<option value="140">Mauritius [MU]</option>
+<option value="142">Mexico [MX]</option>
+<option value="143">Micronesia [FM]</option>
+<option value="144">Moldova [MD]</option>
+<option value="145">Monaco [MC]</option>
+<option value="146">Mongolia [MN]</option>
+<option value="147">Montenegro [ME]</option>
+<option value="149">Morocco [MA]</option>
+<option value="150">Mozambique [MZ]</option>
+<option value="151">Myanmar [MM]</option>
+<option value="152">Namibia [NA]</option>
+<option value="153">Nauru [NR]</option>
+<option value="154">Nepal [NP]</option>
+<option value="156">Netherlands [NL]</option>
+<option value="158">New Zealand [NZ]</option>
+<option value="159">Nicaragua [NI]</option>
+<option value="160">Niger [NE]</option>
+<option value="161">Nigeria [NG]</option>
+<option value="115">North Korea [KP]</option>
+<option value="129">North Macedonia [MK]</option>
+<option value="165">Norway [NO]</option>
+<option value="166">Oman [OM]</option>
+<option value="167">Pakistan [PK]</option>
+<option value="168">Palau [PW]</option>
+<option value="169">Palestinian Territory Occupied [PS]</option>
+<option value="170">Panama [PA]</option>
+<option value="171">Papua new Guinea [PG]</option>
+<option value="172">Paraguay [PY]</option>
+<option value="173">Peru [PE]</option>
+<option value="174">Philippines [PH]</option>
+<option value="176">Poland [PL]</option>
+<option value="177">Portugal [PT]</option>
+<option value="178">Puerto Rico [PR]</option>
+<option value="179">Qatar [QA]</option>
+<option value="181">Romania [RO]</option>
+<option value="182">Russia [RU]</option>
+<option value="183">Rwanda [RW]</option>
+<option value="185">Saint Kitts And Nevis [KN]</option>
+<option value="186">Saint Lucia [LC]</option>
+<option value="188">Saint Vincent And The Grenadines [VC]</option>
+<option value="191">Samoa [WS]</option>
+<option value="192">San Marino [SM]</option>
+<option value="193">Sao Tome and Principe [ST]</option>
+<option value="194">Saudi Arabia [SA]</option>
+<option value="195">Senegal [SN]</option>
+<option value="196">Serbia [RS]</option>
+<option value="197">Seychelles [SC]</option>
+<option value="198">Sierra Leone [SL]</option>
+<option value="199">Singapore [SG]</option>
+<option value="200">Slovakia [SK]</option>
+<option value="201">Slovenia [SI]</option>
+<option value="202">Solomon Islands [SB]</option>
+<option value="203">Somalia [SO]</option>
+<option value="204">South Africa [ZA]</option>
+<option value="116">South Korea [KR]</option>
+<option value="206">South Sudan [SS]</option>
+<option value="207">Spain [ES]</option>
+<option value="208">Sri Lanka [LK]</option>
+<option value="209">Sudan [SD]</option>
+<option value="210">Suriname [SR]</option>
+<option value="212">Swaziland [SZ]</option>
+<option value="213">Sweden [SE]</option>
+<option value="214">Switzerland [CH]</option>
+<option value="215">Syria [SY]</option>
+<option value="216">Taiwan [TW]</option>
+<option value="217">Tajikistan [TJ]</option>
+<option value="218">Tanzania [TZ]</option>
+<option value="219">Thailand [TH]</option>
+<option value="17">The Bahamas [BS]</option>
+<option value="220">Togo [TG]</option>
+<option value="222">Tonga [TO]</option>
+<option value="223">Trinidad And Tobago [TT]</option>
+<option value="224">Tunisia [TN]</option>
+<option value="225">Turkey [TR]</option>
+<option value="226">Turkmenistan [TM]</option>
+<option value="228">Tuvalu [TV]</option>
+<option value="229">Uganda [UG]</option>
+<option value="230">Ukraine [UA]</option>
+<option value="231">United Arab Emirates [AE]</option>
+<option value="232">United Kingdom [GB]</option>
+<option selected="selected" value="233">United States [US]</option>
+<option value="234">United States Minor Outlying Islands [UM]</option>
+<option value="235">Uruguay [UY]</option>
+<option value="236">Uzbekistan [UZ]</option>
+<option value="237">Vanuatu [VU]</option>
+<option value="239">Venezuela [VE]</option>
+<option value="240">Vietnam [VN]</option>
+<option value="242">Virgin Islands (US) [VI]</option>
+<option value="245">Yemen [YE]</option>
+<option value="246">Zambia [ZM]</option>
+<option value="247">Zimbabwe [ZW]</option>
+</select>
+                    </div>
+
+                        <div class="col-md-6 form-group">
+                            <label class="mb-0" for="AddrStateId">State</label>
+                            <select class="form-control form-control-sm" id="AddrStateId" name="AddrStateId">-select-</select>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="mb-0" for="AddrCity">City</label>
+                            <input class="form-control form-control-sm" type="text" id="AddrCity" name="AddrCity" value="">
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="mb-0" for="AddrZipCode">Zip Code</label>
+                            <input class="form-control form-control-sm" type="text" id="AddrZipCode" name="AddrZipCode" value="">
+                        </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="mb-0" for="AddrPhone">Telephone Number(s)</label>
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-sm w-50" type="text" id="AddrPhone" name="AddrPhone" value="">
+                            <div class="input-group-append"><div class="input-group-text">Ext:</div></div>
+                            <input class="form-control form-control-sm" type="text" id="AddrPhoneExt" name="AddrPhoneExt" value="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="mb-0" for="AddrFax">Fax</label>
+                        <input class="form-control form-control-sm" type="text" id="AddrFax" name="AddrFax" value="">
+                    </div>
+
+                    <div class="col-md-6 form-group">
+                        <label class="mb-0" for="AddrEmail">Email Address</label>
+                        <input class="form-control form-control-sm" type="text" id="AddrEmail" name="AddrEmail" value="">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-right">
+                <button id="btnSaveAddress" type="button" class="btn btn-secondary btn-sm"><i class="fas fa-save"></i> Save</button>
+                <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $().ready(function () {
+        try
+        {
+            $('#addressForm').on('show.bs.modal', function (e) {
+                var cId = $(e.relatedTarget).data('id');
+
+                if (cId != 0) {
+                    var form = $('#frmAddress').find("select, textarea, input");
+                    $.ajax({
+                        type: "POST",
+                        url: "/getaddress",
+                        data: { 'id': cId },
+                        success: function (data) {
+                            //console.log(data);
+                            $.each(form, function (key, obj) {
+                                if ($(obj).attr('id') != null)
+                                    $(obj).val(data[$(obj).attr('id').substring(0, 1).toLowerCase() + $(obj).attr('id').substring(1, $(obj).attr('id').length)]);
+                            });
+
+
+                                    if (parseInt($('#frmAddress #AddrCountryId').val()) > 0) {
+                                                        var st = $('#frmAddress #AddrStateId'); $(st).empty();
+                                                        $.get("/getstates/" + $('#frmAddress #AddrCountryId').val(), function (response) {
+                                                            $.each(response, function (i, e) {
+                                                                $(st).append('<option value="&#x27; &#x2B; e.id &#x2B; &#x27;">' + e.name + '</option>');
+                                                            });
+                                                            $(st).val(data.addrStateId);
+                                                        });
+                                                    }
+                                                        },
+                        error: function (err) {
+                            console.log(err);
+                        }
+                    });
+                }
+
+                $('#btnSaveAddress').attr('data-id', cId);
+            });
+
+            $("#btnSaveAddress").click(function (e) {
+                var form = $('#frmAddress').find("select, textarea, input");
+                var _id = $(this).attr('data-id');
+                var editing = true;
+                //if (_id > 0) editing = confirm('Editing charges will re-generate the invoice attached to the order.\r\nDo you wish to proceed with this action?');
+                if (editing) {
+                    $.ajax({
+                        type: "POST",
+                        url: "/saveaddress",
+                        data: form.serialize() + '&Id=' + _id,
+                        success: function (data) {
+                            //$('#chargesList .er-data').remove();
+                            //console.log(data);
+                            var nData = '<tr><td class="w-10"><button type="button" data-id="' + data.id + '" data-toggle="modal" data-target="#addressForm" class="p-0 bg-transparent border-0 text-secondary"><i class="fas fa-edit"></i></button></td><td class="w-10">' + data.addrOrders + '</td><td>' + data.addrLine1 + '</td></tr>';
+                            if (_id > 0) {
+                                $('#addressList').find("[data-id='" + _id + "']").closest('tr').replaceWith(nData);
+                            } else {
+                                $('#addressList').append(nData);
+                            }
+                            form.val('');
+                        },
+                        error: function (err) {
+                            console.log(err);
+                        }
+                    });
+                }
+                $('#addressForm').modal('hide');
+
+            });
+        }
+        catch (e) 
+        {
+
+        }
+    });    
+</script>
+                    </div>
+                </div>
+            </div>
+            <div id="cAttachment" class="tab-pane fade" role="tabpanel">...</div>
+            <div id="cNotes" class="tab-pane fade" role="tabpanel">...</div>
+        </div>
+    </div>
+    <div class="card-footer text-right">
+
+            <button id="btnSaveContact" type="button" class="btn btn-secondary btn-sm"><i class="fas fa-save"></i> Save</button>
+            <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
+        
+    </div>
+</div>
+
+
+<script>
+    $().ready(function () {
+        
+        function checkLinkedCustomer(){
+            if($('#Type').val()=="Carrier"){
+                $('#dvLinkedCustomer').removeClass('invisible');
+            } else {
+                $('#dvLinkedCustomer').addClass('invisible');
+            }
+        }
+        
+        $('#profileForm').on('show.bs.modal', function (e) {
+            checkLinkedCustomer();
+        });
+        checkLinkedCustomer();
+        // try{
+        //     $('#CountryId').on('change', function () {
+        //         var st = '#' + $(this).attr('data-stateid');
+        //         alert('country');
+        //         $(st).empty();
+        //         $.get("/getstates/" + $(this).val(), function (response) {
+        //             $.each(response, function (i, e) {
+        //                 $(st).append($('<option>', {
+        //                     value: e.id,
+        //                     text: e.name
+        //                 }));
+        //             });
+        //         });
+        //     });
+        // } catch(e){
+        //     console.log(e);
+        // }
+        try
+            {
+                $('#showIdDoc').on('show.bs.modal', function (event) {
+                    var btn = $(event.relatedTarget);
+                    var docFile = "https://xyzlogistics.solhaven.net/ups/" + btn.data('doc');
+                    var obj = $(this).find('#idFile');
+                    obj.attr('data', docFile)
+                    obj.attr('type', btn.data('mime'));
+                    obj.find('a').attr('href', docFile);
+                })
+                
+
+                        $('.nm').blur(function(e){
+                            var txt = ($('#FirstName').val() + ' ' + $('#LastName').val()).trim();
+                            $('#dvName').text(txt); $('#Name').val(txt);
+                        })
+                            //    } catch(e) {
+        //        console.log(e);
+        //    }
+        //try {
+
+            $("#btnSaveContact").click(function (e) {
+                var form = $('#frmContact').find("select, textarea, input");
+                //form.append('<input id = "Id" type="hidden" value="' + $(this).attr('data-id') + '" />');
+                var ic = $(this).find('i');
+                var ic_ = "";
+                if (ic.length) {
+                    ic_ = ic.attr('class');
+                    ic.attr('class', 'fas fa-spinner fa-spin');
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/profile/employeej",
+                    data: form.serialize(),
+                    success: function (data) {
+                        var opt = "<option>";
+
+                            //console.log(data);
+                            var ct = '#' + $('#dvProfileContact #ctrl').val();
+                            form.val('');
+                            $(ct).append($(opt, {
+                                value: data.id,
+                                text: data.name
+                            }));
+                            $(ct).selectpicker("refresh");
+                            $(ct).val(data.id);
+                            $(ct).selectpicker("refresh");
+                            $("#profileForm .close").click();
+                                                },
+                    error: function (err) {
+                        console.log(err);
+                    },
+                    complete: function (data) {
+                        ic.attr('class', ic_);
+                    }
+                });
+
+            });
+
+        } catch (e) {
+            console.log(e);
+        }
+    })
+</script>
+                                    </div>
+                                    <div b-av3p7791rh="" id="dvProfilePort" class="p-0 m-0" style="display:none;">
+                                        
+
+<div class="card rcd">
+
+
+    <div class="card-body" id="frmPort">
+        <div class="form-row">
+            <input id="Id" name="Id" type="hidden" value="0">
+            <input id="ctrl" name="ctrl" type="hidden" value="">
+            <div class="col-md-4 form-group">
+                <label class="mb-0" for="Country">Country:</label>
+                <select class="form-control form-control-sm" id="Country" name="Country"><option value="1">Afghanistan [AF]</option>
+<option value="3">Albania [AL]</option>
+<option value="4">Algeria [DZ]</option>
+<option value="6">Andorra [AD]</option>
+<option value="7">Angola [AO]</option>
+<option value="10">Antigua And Barbuda [AG]</option>
+<option value="11">Argentina [AR]</option>
+<option value="12">Armenia [AM]</option>
+<option value="14">Australia [AU]</option>
+<option value="15">Austria [AT]</option>
+<option value="16">Azerbaijan [AZ]</option>
+<option value="18">Bahrain [BH]</option>
+<option value="19">Bangladesh [BD]</option>
+<option value="20">Barbados [BB]</option>
+<option value="21">Belarus [BY]</option>
+<option value="22">Belgium [BE]</option>
+<option value="23">Belize [BZ]</option>
+<option value="24">Benin [BJ]</option>
+<option value="25">Bermuda [BM]</option>
+<option value="26">Bhutan [BT]</option>
+<option value="27">Bolivia [BO]</option>
+<option value="155">Bonaire, Sint Eustatius and Saba [BQ]</option>
+<option value="28">Bosnia and Herzegovina [BA]</option>
+<option value="29">Botswana [BW]</option>
+<option value="31">Brazil [BR]</option>
+<option value="33">Brunei [BN]</option>
+<option value="34">Bulgaria [BG]</option>
+<option value="35">Burkina Faso [BF]</option>
+<option value="36">Burundi [BI]</option>
+<option value="37">Cambodia [KH]</option>
+<option value="38">Cameroon [CM]</option>
+<option value="39">Canada [CA]</option>
+<option value="40">Cape Verde [CV]</option>
+<option value="42">Central African Republic [CF]</option>
+<option value="43">Chad [TD]</option>
+<option value="44">Chile [CL]</option>
+<option value="45">China [CN]</option>
+<option value="48">Colombia [CO]</option>
+<option value="49">Comoros [KM]</option>
+<option value="50">Congo [CG]</option>
+<option value="53">Costa Rica [CR]</option>
+<option value="54">Cote D'Ivoire (Ivory Coast) [CI]</option>
+<option value="55">Croatia [HR]</option>
+<option value="56">Cuba [CU]</option>
+<option value="57">Cyprus [CY]</option>
+<option value="58">Czech Republic [CZ]</option>
+<option value="51">Democratic Republic of the Congo [CD]</option>
+<option value="59">Denmark [DK]</option>
+<option value="60">Djibouti [DJ]</option>
+<option value="61">Dominica [DM]</option>
+<option value="62">Dominican Republic [DO]</option>
+<option value="63">East Timor [TL]</option>
+<option value="64">Ecuador [EC]</option>
+<option value="65">Egypt [EG]</option>
+<option value="66">El Salvador [SV]</option>
+<option value="67">Equatorial Guinea [GQ]</option>
+<option value="68">Eritrea [ER]</option>
+<option value="69">Estonia [EE]</option>
+<option value="70">Ethiopia [ET]</option>
+<option value="73">Fiji Islands [FJ]</option>
+<option value="74">Finland [FI]</option>
+<option value="75">France [FR]</option>
+<option value="79">Gabon [GA]</option>
+<option value="80">Gambia The [GM]</option>
+<option value="81">Georgia [GE]</option>
+<option value="82">Germany [DE]</option>
+<option value="83">Ghana [GH]</option>
+<option value="85">Greece [GR]</option>
+<option value="87">Grenada [GD]</option>
+<option value="90">Guatemala [GT]</option>
+<option value="92">Guinea [GN]</option>
+<option value="93">Guinea-Bissau [GW]</option>
+<option value="94">Guyana [GY]</option>
+<option value="95">Haiti [HT]</option>
+<option value="97">Honduras [HN]</option>
+<option value="98">Hong Kong S.A.R. [HK]</option>
+<option value="99">Hungary [HU]</option>
+<option value="100">Iceland [IS]</option>
+<option value="101">India [IN]</option>
+<option value="102">Indonesia [ID]</option>
+<option value="103">Iran [IR]</option>
+<option value="104">Iraq [IQ]</option>
+<option value="105">Ireland [IE]</option>
+<option value="106">Israel [IL]</option>
+<option value="107">Italy [IT]</option>
+<option value="108">Jamaica [JM]</option>
+<option value="109">Japan [JP]</option>
+<option value="111">Jordan [JO]</option>
+<option value="112">Kazakhstan [KZ]</option>
+<option value="113">Kenya [KE]</option>
+<option value="114">Kiribati [KI]</option>
+<option value="248">Kosovo [XK]</option>
+<option value="117">Kuwait [KW]</option>
+<option value="118">Kyrgyzstan [KG]</option>
+<option value="119">Laos [LA]</option>
+<option value="120">Latvia [LV]</option>
+<option value="121">Lebanon [LB]</option>
+<option value="122">Lesotho [LS]</option>
+<option value="123">Liberia [LR]</option>
+<option value="124">Libya [LY]</option>
+<option value="125">Liechtenstein [LI]</option>
+<option value="126">Lithuania [LT]</option>
+<option value="127">Luxembourg [LU]</option>
+<option value="130">Madagascar [MG]</option>
+<option value="131">Malawi [MW]</option>
+<option value="132">Malaysia [MY]</option>
+<option value="133">Maldives [MV]</option>
+<option value="134">Mali [ML]</option>
+<option value="135">Malta [MT]</option>
+<option value="137">Marshall Islands [MH]</option>
+<option value="139">Mauritania [MR]</option>
+<option value="140">Mauritius [MU]</option>
+<option value="142">Mexico [MX]</option>
+<option value="143">Micronesia [FM]</option>
+<option value="144">Moldova [MD]</option>
+<option value="145">Monaco [MC]</option>
+<option value="146">Mongolia [MN]</option>
+<option value="147">Montenegro [ME]</option>
+<option value="149">Morocco [MA]</option>
+<option value="150">Mozambique [MZ]</option>
+<option value="151">Myanmar [MM]</option>
+<option value="152">Namibia [NA]</option>
+<option value="153">Nauru [NR]</option>
+<option value="154">Nepal [NP]</option>
+<option value="156">Netherlands [NL]</option>
+<option value="158">New Zealand [NZ]</option>
+<option value="159">Nicaragua [NI]</option>
+<option value="160">Niger [NE]</option>
+<option value="161">Nigeria [NG]</option>
+<option value="115">North Korea [KP]</option>
+<option value="129">North Macedonia [MK]</option>
+<option value="165">Norway [NO]</option>
+<option value="166">Oman [OM]</option>
+<option value="167">Pakistan [PK]</option>
+<option value="168">Palau [PW]</option>
+<option value="169">Palestinian Territory Occupied [PS]</option>
+<option value="170">Panama [PA]</option>
+<option value="171">Papua new Guinea [PG]</option>
+<option value="172">Paraguay [PY]</option>
+<option value="173">Peru [PE]</option>
+<option value="174">Philippines [PH]</option>
+<option value="176">Poland [PL]</option>
+<option value="177">Portugal [PT]</option>
+<option value="178">Puerto Rico [PR]</option>
+<option value="179">Qatar [QA]</option>
+<option value="181">Romania [RO]</option>
+<option value="182">Russia [RU]</option>
+<option value="183">Rwanda [RW]</option>
+<option value="185">Saint Kitts And Nevis [KN]</option>
+<option value="186">Saint Lucia [LC]</option>
+<option value="188">Saint Vincent And The Grenadines [VC]</option>
+<option value="191">Samoa [WS]</option>
+<option value="192">San Marino [SM]</option>
+<option value="193">Sao Tome and Principe [ST]</option>
+<option value="194">Saudi Arabia [SA]</option>
+<option value="195">Senegal [SN]</option>
+<option value="196">Serbia [RS]</option>
+<option value="197">Seychelles [SC]</option>
+<option value="198">Sierra Leone [SL]</option>
+<option value="199">Singapore [SG]</option>
+<option value="200">Slovakia [SK]</option>
+<option value="201">Slovenia [SI]</option>
+<option value="202">Solomon Islands [SB]</option>
+<option value="203">Somalia [SO]</option>
+<option value="204">South Africa [ZA]</option>
+<option value="116">South Korea [KR]</option>
+<option value="206">South Sudan [SS]</option>
+<option value="207">Spain [ES]</option>
+<option value="208">Sri Lanka [LK]</option>
+<option value="209">Sudan [SD]</option>
+<option value="210">Suriname [SR]</option>
+<option value="212">Swaziland [SZ]</option>
+<option value="213">Sweden [SE]</option>
+<option value="214">Switzerland [CH]</option>
+<option value="215">Syria [SY]</option>
+<option value="216">Taiwan [TW]</option>
+<option value="217">Tajikistan [TJ]</option>
+<option value="218">Tanzania [TZ]</option>
+<option value="219">Thailand [TH]</option>
+<option value="17">The Bahamas [BS]</option>
+<option value="220">Togo [TG]</option>
+<option value="222">Tonga [TO]</option>
+<option value="223">Trinidad And Tobago [TT]</option>
+<option value="224">Tunisia [TN]</option>
+<option value="225">Turkey [TR]</option>
+<option value="226">Turkmenistan [TM]</option>
+<option value="228">Tuvalu [TV]</option>
+<option value="229">Uganda [UG]</option>
+<option value="230">Ukraine [UA]</option>
+<option value="231">United Arab Emirates [AE]</option>
+<option value="232">United Kingdom [GB]</option>
+<option selected="selected" value="233">United States [US]</option>
+<option value="234">United States Minor Outlying Islands [UM]</option>
+<option value="235">Uruguay [UY]</option>
+<option value="236">Uzbekistan [UZ]</option>
+<option value="237">Vanuatu [VU]</option>
+<option value="239">Venezuela [VE]</option>
+<option value="240">Vietnam [VN]</option>
+<option value="242">Virgin Islands (US) [VI]</option>
+<option value="245">Yemen [YE]</option>
+<option value="246">Zambia [ZM]</option>
+<option value="247">Zimbabwe [ZW]</option>
+</select>
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="mb-0" for="PortName">Port Name:</label>
+                <input class="form-control form-control-sm" id="PortName" name="PortName" type="text" value="">
+            </div>
+            <div class="col-md-4 form-group">
+                <label class="mb-0" for="Subdivision">Subdivision:</label>
+                <input class="form-control form-control-sm" id="Subdivision" name="Subdivision" type="text" value="">
+            </div>
+            
+            <div class="col-md-4 form-group">
+                <label class="mb-0" for="TransportationMethod">Transportation Method:</label>
+                <div class="dropdown bootstrap-select show-tick form-control form-control-sm"><select class="form-control form-control-sm selectpicker" id="TransportationMethod" multiple="multiple" name="TransportationMethod" tabindex="-98"><option value="Air">Air</option>
+<option value="Air_Expedited">Air Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Rail">Rail</option>
+<option value="Road">Road</option>
+</select><button type="button" class="btn dropdown-toggle btn-light bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" data-id="TransportationMethod" title="Nothing selected"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Nothing selected</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-2" tabindex="-1" aria-multiselectable="true"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+            </div>
+            
+            <div class="col-md-4 form-group">
+                <label class="mb-0" for="Remarks">Remarks:</label>
+                <input class="form-control form-control-sm" id="Remarks" name="Remarks" type="text" value="">
+            </div>
+
+            <div class="col-md-4 form-group">
+                <label class="mb-0">&nbsp;</label>
+                <div class="form-control form-control-sm">
+                    <div class="form-check">
+                        <label class="form-check-label d-block" for="InUse"><input type="checkbox" class="form-check-input" checked="checked" data-val="true" data-val-required="The InUse field is required." id="InUse" name="InUse" value="true"><input name="InUse" type="hidden" value="false"> Inuse</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 form-group">
+                <label class="mb-0" for="Note">Note:</label>
+                <textarea class="form-control form-control-sm" id="Note" name="Note"></textarea>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-footer text-right">
+            <button id="btnSavePort" type="button" class="btn btn-secondary btn-sm"><i class="fas fa-save"></i> Save</button>
+            <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
+    </div>
+</div>
+
+
+<script>
+    $().ready(function () {
+        
+        try{
+            $('#CountryId').on('change', function () {
+                var st = '#' + $(this).attr('data-stateid');
+                $(st).empty();
+                $.get("/getstates/" + $(this).val(), function(response){
+                    $.each(response, function (i, e) {
+                        $(st).append($('<option>', {
+                            value: e.id,
+                            text: e.name
+                        }));
+                    });
+                });
+            })
+        } catch(e){
+            console.log(e);
+        }
+
+        try
+            {
+                $('#showIdDoc').on('show.bs.modal', function (event) {
+                    var btn = $(event.relatedTarget);
+                    var docFile = "https://xyzlogistics.solhaven.net/ups/" + btn.data('doc');
+                    var obj = $(this).find('#idFile');
+                    obj.attr('data', docFile)
+                    obj.attr('type', btn.data('mime'));
+                    obj.find('a').attr('href', docFile);
+                })
+                
+
+            $("#btnSavePort").click(function (e) {
+                var form = $('#frmPort').find("select, textarea, input");
+                //form.append('<input id = "Id" type="hidden" value="' + $(this).attr('data-id') + '" />');
+                var ic = $(this).find('i');
+                var ic_ = "";
+                if (ic.length) {
+                    ic_ = ic.attr('class');
+                    ic.attr('class', 'fas fa-spinner fa-spin');
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/profile/portsj",
+                    data: form.serialize(),
+                    success: function (data) {
+                        //console.log(data);
+                        var opt = "<option>";
+
+                            //console.log(data);
+                            var ct = '#' + $('#dvProfilePort #ctrl').val();
+                            form.val('');
+                            $(ct).append($(opt, {
+                                value: data.id,
+                                text: data.portName
+                            }));
+                            $(ct).selectpicker("refresh");
+                            $(ct).val(data.id);
+                            $(ct).selectpicker("refresh");
+                            $("#profileForm .close").click();
+                                                },
+                    error: function (err) {
+                        console.log(err);
+                    },
+                    complete: function (data) {
+                        ic.attr('class', ic_);
+                    }
+                });
+
+            });
+
+        } catch (e) {
+            console.log(e);
+        }
+    })
+</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div b-av3p7791rh="" class="modal fade" id="mailClient" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+                    <div b-av3p7791rh="" class="modal-dialog modal-lg">
+                        <div b-av3p7791rh="" class="modal-content">
+                            <div b-av3p7791rh="" class="modal-header">
+                                <h5 b-av3p7791rh="" class="modal-title">Send Email</h5>
+                                <button b-av3p7791rh="" type="button" class="close" data-dismiss="modal">×</button>
+                            </div>
+                            <div b-av3p7791rh="" class="modal-body p-0">
+                                
+
+<div class="card" id="frmMailer">
+
+    <div class="card-body" id="frmContact">
+        <div class="form-row">
+            <label class="col-form-label col-md-2">Sender</label>
+            <select class="form-control form-control-sm col-md-10" id="SenderEmail" name="SenderEmail">
+                <option value="logistics@solhaven.net">XYZ Company</option>
+                <option value="smart.okon@solhavensystems.com" selected="">Smart Okon</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label class="col-form-label col-md-2">Customer' Email</label>
+            <input class="form-control form-control-sm col-md-10" value="" type="text" data-val="true" data-val-required="Mail destination is required" id="ToEmail" name="ToEmail">
+        </div>
+
+        <div id="dvCC" class="form-row" style="display:none;">
+            <label class="col-form-label col-md-2">Copy Email</label>
+            <input class="form-control form-control-sm col-md-10" value="" type="text" id="ToCCEmail" name="ToCCEmail">
+        </div>
+        <div class="form-row">
+            <label class="col-form-label col-md-2">Subject</label>
+            <input class="form-control form-control-sm col-md-10" value="" type="text" data-val="true" data-val-required="Mail Subject is required" id="Subject" name="Subject">
+        </div>
+
+        <div class="form-row">
+
+            <label class="col-form-label col-12">
+                Message: 
+                <span id="spCC" class="badge badge-primary ms-2 p-1" style="cursor:pointer;right:0;">Add Copy</span>
+            </label>
+
+            <div class="col-12">
+                <input data-val="true" data-val-required="Email body is required" id="Body" name="Body" type="hidden" value="">
+                <div id="dvBody" contenteditable="true" class="form-control form-control-sm" style="height:200px;overflow-y:auto;">
+                    
+                </div>
+                <div class="border border-top-0 px-2">
+
+                    <hr class="mb-0 pb-0">
+                    <div class="text-primary">
+                        <strong>Note:</strong> <span>Your Signature <em>{Smart Okon}</em> would be attached to this email.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer text-right">
+        <input data-val="true" data-val-required="The Attachment field is required." id="Attachment" name="Attachment" type="hidden" value="">
+        <div class="float-left text-danger">
+            <span id="spLink">Compiling attachments... <i class="fas fa-spinner fa-spin"></i></span>
+        </div>
+
+        <button id="btnSend" type="button" class="btn btn-secondary btn-sm"><i class="fas fa-paper-plane"></i> Send</button>
+        <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal"><i class="fas fa-times"></i> Cancel</button>
+    </div>
+</div>
+
+
+<script>
+    $().ready(function () {
+
+        try 
+        {
+            $("#btnSend").click(function (e) {
+                $('#Body').val($('#dvBody').html());
+                var btn = $(this);
+                btn.addClass('disabled');
+                btn.find('i').attr('class', 'fas fa-cog fa-spin');
+                var form = $('#frmMailer').find("select, textarea, input");
+
+                $.ajax({
+                    type: "POST",
+                    url: "/sendmail",
+                    data: form.serialize(),
+                    success: function (data) {
+                        window.location.reload();
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    },
+                    complete: function(jqXhr, msg){
+                        btn.find('i').attr('class', 'fas fa-paper-plane');
+                        btn.removeClass('disabled');
+                    }
+                });
+            });
+
+            $("#spCC").click(function(){
+                $("#dvCC").toggle();
+            });
+
+        } catch (e) {
+            console.log(e);
+        }
+    })
+</script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer b-av3p7791rh="" class="footer text-center text-muted border-top">
+            <div b-av3p7791rh="" class="mb-2">
+                <small b-av3p7791rh="">
+                    © 2020 <span b-av3p7791rh=""> - 2024 </span> <a b-av3p7791rh="" href="#">XYZ Company Admin</a> | <a href="https://xyzlogistics.solhaven.net/Home/Privacy">Privacy</a> &nbsp; &nbsp; <a b-av3p7791rh="" href="https://www.solhavensystems.com/" target="_blank">SolHaven Systems</a>
+                </small>
+            </div>
+        </footer>
+        <input b-av3p7791rh="" id="SearchCriteria" type="hidden" value="">
+    </div>
+
+    <script src="./Dashboard - Logistics_files/popper.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/bootstrap-select.min.js.download"></script>
+
+    <script src="./Dashboard - Logistics_files/jquery.datetimepicker.full.min.js.download"></script>
+
+    <script src="./Dashboard - Logistics_files/jquery.dataTables.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/dataTables.buttons.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/jszip.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/pdfmake.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/vfs_fonts.js.download"></script>
+    <script src="./Dashboard - Logistics_files/buttons.html5.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/buttons.print.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/printThis.js.download"></script>
+    <script src="./Dashboard - Logistics_files/buttons.html5.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/html2canvas.min.js.download"></script>
+    <script src="./Dashboard - Logistics_files/site.js.download"></script>
+
+    <script>
+
+
+        function editing() {
+            $('.rcd').toggle('slow');
+            $('.lst').toggle('slow');
+        }
+
+        try {
+
+            var role = '.account_invoice | account_invoice_air | account_invoice_ocean | account_invoice_others | account_invoice_generate | account_invoice_update | account_invoice_delete | account_payment | account_payment_add | account_payment_edit | account_payment_delete | dashboard_Page | dashboard_invoice_raised | dashboard_awaiting_pickup | dashboard_transactions | dashboard_active_Users | dashboard_new_registration | dashboard_payment_today | dashboard_sms_units | dashboard_server_prompts | dashboard_active_customers | dashboard_disabled_customers | roles_Page | roles_add | roles_edit | roles_delete | user_list_Page | user_add | user_list_allow | user_list_disable | user_list_reset | tranx_export | audit_log_page | report_Page | tranx_Page | tranx_sms | tranx_call | tranx_treat | tranx_remove | profile_carriers | profile_carriers_add | profile_carriers_edit | profile_carriers_delete | profile_forwarding_agent | profile_forwarding_agent_add | profile_forwarding_agent_edit | profile_forwarding_agent_delete | profile_warehouse_provider | profile_warehouse_provider_add | profile_warehouse_provider_edit | profile_warehouse_provider_delete | profile_customers | profile_customers_add | profile_customers_edit | profile_customers_delete | profile_vendors | profile_vendors_add | profile_vendors_edit | profile_vendors_delete | profile_sales_persons | profile_sales_persons_add | profile_sales_persons_edit | profile_sales_persons_delete | profile_contacts | profile_contacts_add | profile_contacts_edit | profile_contacts_delete | profile_employees | profile_employees_add | profile_employees_edit | profile_employees_delete | profile_ports | profile_ports_add | profile_ports_edit | profile_ports_delete | profile_countries | profile_countries_add | profile_countries_edit | profile_countries_delete | shipment_airwaybill | shipping_airwaybill_add | shipment_airwaybill_update | shipment_airwaybill_delete';
+            $(role.replace(/\ /g, '').replace(/\|/g, ', .')).removeClass("d-none");
+
+        } catch(e) {
+            console.log(e);
+        }
+
+        $().ready(function(){
+            $('.no-auto-fill').attr('autocomplete', 'off');
+            
+            $('#SearchDate').on('change', function () {
+                if ($(this).val() == 'Custom') $('#SearchDateFrom, #SearchDateTo').removeClass('d-none'); else $('#SearchDateFrom, #SearchDateTo').addClass('d-none');
+            });
+
+            try
+            {
+                $('.page-content').on('click', '.deleteRecord', function () 
+                {
+                    if (confirm("Are you sure you wish to delete this record?\r\nClick Yes/Ok to proceed")) {
+                        var et = $(this).attr('data-entity');
+                        var id = $(this).attr('data-id');
+                        
+                        var ic = $(this).find('i');
+                        if (ic.length) {
+                            ic.attr('class', 'fas fa-spinner fa-spin');
+                        }
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/deleterecord",
+                            data: { 'entity': et, 'id': id, 'pg': $('#SearchCriteria').val() },
+                            complete: function (ctl) {
+                                location.reload();
+                            }
+                        });
+                    }
+                });
+
+                $('.btnPrs').click(function(){
+                   var ic = $(this).find('i'); if (ic.length) ic.attr('class', 'fas fa-spinner fa-spin');
+                });
+            }
+            catch(e){
+                console.log(e);
+            }
+            //$('button').click(function(){
+            //    var ic = $(this).find('i');
+            //    if (ic.length) {
+            //        ic.attr('class', 'fas fa-spinner fa-spin');
+            //    }
+            //})
+            try
+            {
+                $('#btnDeleteSelected').on('click', function(){
+                    alert('Process under review...');
+                });
+                
+                //$('#dvMailClient').on('click', function(){
+                //    var _id = $(this).attr('data-id');
+                //    $.ajax({
+                //        url: "/mailtoclient", type: "POST", data: { "id": _id }, dataType: 'json',
+                //        success: function (response) {
+                //            alert(response);
+                //        },
+                //        error: function (err) {
+                //            console.log(err);
+                //        }
+                //    });
+                //})
+
+                $('#dvPrintReport').on('click', function(){
+                    var btn = $(this);
+                    btn.addClass('disabled');
+                    btn.find('i').attr('class', 'fas fa-cog fa-spin');
+                    var id = $(this).attr('data-id');
+                    $.ajax({
+                        url: '/getpdf',
+                        type: "POST",
+                        data: { "id": id, "type": 'Dashboard', "qry": 'Home' },
+                        //dataType: "application/pdf",
+                        success: function (data)
+                        {
+                            //var pdfWin = window.open("data:application/pdf;base64, " + data, '_blank');
+                            //console.log(data);
+                            var iframe = "<iframe width='100%' height='100%' src='data:application/pdf;base64, " + data + "'></iframe>"
+                            var pdfWin = window.open('_blank');
+                            pdfWin.document.open();
+                            pdfWin.document.write(iframe);
+                            pdfWin.document.close();
+                            //pdfWin.focus();
+                            //pdfWin.print();
+                            //pdfWin.close();
+                        },
+                        error: function (jqXHR) {
+                            console.log(jqXHR);
+                            //alert('Error');
+                        },
+                        complete: function (jqXhr, msg) {
+                            btn.find('i').attr('class', 'fas fa-print');
+                            btn.removeClass('disabled');
+                        }
+                    });
+                    //$('#dvReport').printThis();
+                    //html2canvas(document.getElementById('dvReport')).then(function (canvas) {
+                    //    var data = canvas.toDataURL();
+                    //    var docDefinition = {
+                    //        pageSize: 'A4',
+                    //        pageMargins: [1, 1, 1, 1],
+                    //        content: [{
+                    //            image: data,
+                    //            //width: 595,
+                    //            fit: [595, 841]
+                    //        }]
+                    //    };
+                    //    pdfMake.createPdf(docDefinition).print();
+                    //});
+                });
+
+                $(".lst th input[type='checkbox']").on('change', function () {
+                    $(".ctrl input[type='checkbox']").prop("checked", $(this).is(':checked')).change();
+                });
+
+                $(".ctrl input[type='checkbox']").on('change',function(){
+                    var mId = $(this).attr('id').substring(4);
+                    let aId = $('#btnMailSelected').attr('data-id').length > 1 ? $('#btnMailSelected').attr('data-id').split(',') : [];
+                    if(!$(this).is(':checked')) {
+                        $(".lst th input[type='checkbox']").prop("checked", false);
+                        aId = jQuery.grep(aId, function (value) { return value != mId; });
+
+                    } else {
+                        if(!aId.includes(mId) && $.trim(mId) != '') aId.push(mId);
+                    }
+                    $('#btnMailSelected').attr('data-id', aId.join(','));
+                });
+
+                $(".lst th input[type='checkbox'], .ctrl input[type='checkbox']").on('change', function () {
+                    if($(this).is(':checked')) 
+                    {
+                        $('#btnMailSelected, #btnDeleteSelected').removeClass('disabled');
+                    } else {
+                        $('#btnMailSelected, #btnDeleteSelected').addClass('disabled');
+                    }
+                });
+
+                $('.lst table').each(function (i, obj) {
+                    if ($(this).find('tbody tr').length > 1) {
+                        $(this).DataTable({
+                            destroy: true,
+                            dom: 'Blfrtip', buttons: [], buttons: ['csv', 'excel', 'pdf'],
+                            "pageLength": 100
+                        });
+                    }
+                });
+                
+
+                $('.selectpicker2').selectpicker({
+                    liveSearch: true,
+                    maxOptions: 1
+                });
+
+                $('#btnClose').click(function(){
+                    $('#btnAdd').show();
+                    $('.well').fadeToggle(); $('table').fadeToggle();
+                });
+
+                $('.date').datetimepicker({
+                    format:'Y-m-d',
+                    formatDate:'Y-m-d',
+                    timepicker:false,
+                    //defaultSelect:false
+                });
+
+                $('.datetime').datetimepicker({
+                    format:'Y-m-d H:i:s',
+                    formatTime:'H:i',
+                    formatDate:'Y-m-d'
+                    //defaultSelect:false
+                });
+                
+                //add profile
+                //check if user can add profile
+                $('.profile').click(function(){
+                    if($(this).attr('data-name')=='Port') {
+                        $('#dvProfileContact').hide();
+                        $('#dvProfilePort').show();
+                    } else {
+                        $('#dvProfilePort').hide();
+                        $('#dvProfileContact').show();
+                        $('#profileForm #Type').val($(this).attr('data-name'));
+                    }
+                    $('#spProfileType').text($(this).attr('data-name'));
+                    $('#profileForm #Id').val('0');
+                    $('#profileForm #ctrl').val($(this).parent().parent().find('select').attr('id'));
+                    $('#profileForm').modal();
+                })
+
+                
+                $('.has-addr').on('change', function(){
+                    var tx = $(this).parent().parent().parent().find('textarea')[0];
+                    if(tx == undefined) tx = $('#BillingAddress');
+                    if($(this).val() > 0){
+                        var settings = {
+                            "url": "/profile/getcontact/" + $(this).val(),
+                            "method": "GET",
+                        };
+                        $.ajax(settings).done(function (rsp) {
+                            if(rsp != "") $(tx).val(rsp.fullAddress);
+                        });
+                    }
+                });
+
+            } catch(e) {
+                console.log(e);
+            }
+
+            $.ajax({
+                url: "/clearmsg",
+                success: function (msg) {
+                    //console.log(msg);
+                }
+            });
+
+            $('.selContact').click(function () {
+                $('#Owner').val($(this).attr('data-title'));
+            });
+
+            // $('#contactForm').on('click', 'tr', function (e) {
+            //     var _value = $(this).attr('value').split('|');
+            //     var res = $('#' + $('#_receiver').val());
+            //     res.val(_value[1]);
+            //     res.parent().find('label').text(_value[0]);
+            //     $('#contactForm').modal('hide');
+            // });
+
+            $('#mailClient').on('show.bs.modal', function (e) 
+            {
+                var order = $(e.relatedTarget).data("id");
+                //var _id = $(this).attr('data-id');
+                $.ajax({
+                    url: "/getattachment", type: "POST", data: { "ids": order, "type": 'Dashboard', "qry": 'Home' }, dataType: 'json',
+                    success: function (response) {
+                        //console.log(response);
+                        if(typeof response == "string"){
+                            //if (Object.prototype.toString.call(myvar) == '[object String]')
+                            $('#mailClient #spLink').html(response);
+                        } else {
+                            $('#mailClient #Attachment').val(response.attachment);
+                            $('#mailClient #spLink').html('<a target="_blank" href="https://xyzlogistics.solhaven.net/ups/attachments/' + response.attachment + '"><i class="fas fa-file-pdf fa-2x text-danger"></i></a>');
+                            $('#mailClient #ToEmail').val(response.toEmail);
+                            $('#mailClient #Subject').val(response.subject);
+                        }
+                    },
+                    error: function (err) {
+                        //console.log(err);
+                        $('#mailClient #spLink').html('Error loading attachment(s)')
+                    }
+                });
+            })
+            $('#mailClient').on('hide.bs.modal', function (e){
+                $.ajax({ url: "/remattachment", type: "POST", data: { "fl": $('#mailClient #Attachment').val() }, dataType: 'json', success: function (response) {} });
+            })
+
+            // $('#contactForm').on('show.bs.modal', function (event) {
+
+            //     var button = $(event.relatedTarget);
+            //     var recipient = button.data('type');
+            //     var tb = $('#contactForm table');
+
+            //     tb.html('<thead><tr><th>Name</th><th>Details</th></tr></thead><tbody><tr><td colspan="2" class="text-center small"><i class="fas fa-cog fa-spin"></i> Loading details...</td></tr></tbody>');
+
+            //     $('#_receiver').val(button.offsetParent().find('input').first().attr('id'));
+
+            //     $(this).find('.modal-title').html('<i class="fas fa-list"></i> Select ' + recipient.replace('_', ' '));
+
+            //     $.ajax({
+            //         url: "/profile/details",
+            //         type: "POST",
+            //         data: { "id": recipient },
+            //         dataType: 'json',
+            //         success: function (response) {
+            //             //console.log(response);
+            //             if (response != '') {
+            //                 var _tr = "";
+            //                 $(response).each(function (i, v) {
+            //                     if (recipient == 'Account') {
+            //                         _tr += '<tr value="' + v.name + ' [' + v.accountNo + ']|' + v.id + '">' +
+            //                             '<td><i class="fas fa-user-secret"></i> ' + v.name + '</td>' +
+            //                             '<td><i class="fas fa-cog"></i> ' + v.type + ' &nbsp; <i class="fas fa-eye"></i> ' + v.accountNo + ' [' + v.currency + ']</td>' +
+            //                             '</tr>';
+            //                     } else {
+            //                         _tr += '<tr value="' + v.name + '|' + v.id + '">' +
+            //                             '<td><i class="fas fa-user"></i> ' + v.name + '</td>' +
+            //                             '<td><i class="fas fa-phone"></i> ' + v.phone + '(' + v.phoneExt + ') &nbsp; <i class="fas fa-envelope"></i> ' + v.email + ' [' + v.identificationNumber + ']</td>' +
+            //                             '</tr>';
+            //                     }
+            //                 });
+
+            //                 _tr = '<thead><tr><th>Name</th><th>Details</th></tr></thead><tbody>' + _tr + '</tbody>';
+            //                 tb.html(_tr);
+            //                 tb.DataTable({
+            //                     destroy: true,
+            //                     dom: 'Bfrtip', buttons: [] //, buttons: ['csv', 'excel', 'pdf']
+            //                 });
+
+            //             } else {
+            //                 tb.html('<tr value=""><td colspan="2"><h5 class="text-center text-danger">The ' + recipient.replace('_', ' ') + ' List is currently empty</h5></td></tr>');
+            //                 tb.DataTable({ destroy: true })//.destroy();
+            //             }
+            //         },
+            //         error: function (err) {
+            //             console.log(err);
+            //         }
+            //     });
+
+            // });
+            try {
+                $('.Country').on('change', function () {
+                    var st = '#' + $(this).attr('data-stateid');
+                    $(st).empty();
+                    $.get("/getstates/" + $(this).val(), function (response) {
+                        $.each(response, function (i, e) {
+                            $(st).append($('<option>', {
+                                value: e.id,
+                                text: e.name
+                            }));
+                        });
+                    });
+                });
+            } catch (e) {
+                console.log(e);
+            }
+            try {
+                if ($('#Id').val() != '') {
+                    var _id = $('#Id').val().split('_');
+                    $('#Id').val(_id[_id.length - 1]);
+                    //console.log(_id[_id.length - 1]);
+                }
+            } catch (e) {
+                console.log(e)
+            }
+            
+        })
+    </script>
+
+    
+    <script>
+        $().ready(function(){
+            
+        })
+    </script>
+
+
+
+
+</body></html>
